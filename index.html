@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FWNCCQVMG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7FWNCCQVMG', {
+            'page_title': document.title,
+            'page_location': window.location.href,
+            'timer_metric': true
+        });
+
+        // Custom time tracking
+        let startTime = new Date().getTime();
+        
+        // Track time when user leaves the page
+        window.addEventListener('beforeunload', function() {
+            let endTime = new Date().getTime();
+            let timeSpent = (endTime - startTime) / 1000; // Convert to seconds
+            
+            gtag('event', 'time_on_page', {
+                'time_seconds': timeSpent
+            });
+        });
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Leading DevOps automation experts achieving up to $50k monthly cloud cost savings. Specialized in AWS & Azure optimization, infrastructure automation, and efficient deployment pipelines.">
