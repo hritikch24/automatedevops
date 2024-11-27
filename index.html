@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FWNCCQVMG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FWNCCQVMG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7FWNCCQVMG');
+    </script>
 
-  gtag('config', 'G-7FWNCCQVMG');
-</script>
-    <!-- Rest of your existing head content -->
-    <meta name="description" content="Leading DevOps automation experts achieving up to $50k monthly cloud cost savings. Specialized in AWS & Azure optimization, infrastructure automation, and efficient deployment pipelines.">
-    <meta name="keywords" content="Cloud Cost Optimization, AWS Cost Reduction, Azure Savings, DevOps Automation, Infrastructure as Code, CI/CD Pipeline, Cloud Migration, Kubernetes Management">
-    <title>AutomateDevops | Cloud Cost Optimization & DevOps Automation</title>
+    <meta name="description" content="Premier DevOps automation experts delivering cloud cost optimization, legacy modernization, and containerization solutions. Achieve up to 60% cost savings with our proven methodologies.">
+    <meta name="keywords" content="Cloud Cost Optimization, AWS Cost Reduction, Azure Savings, DevOps Automation, Infrastructure as Code, CI/CD Pipeline, Cloud Migration, Kubernetes Management, Legacy Modernization, Container Migration">
+    <title>AutomateDevops | Cloud Optimization & Modern DevOps Solutions</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
@@ -34,6 +33,37 @@
         .savings-card {
             background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
         }
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        .tech-icon:hover {
+            transform: scale(1.1);
+        }
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f3f4f6 100%);
+        }
+        .service-card {
+            border-left: 4px solid #3B82F6;
+        }
+        .stats-grid {
+            background: linear-gradient(135deg, #1E40AF 0%, #2563EB 100%);
+        }
+        .timeline-item {
+            border-left: 2px solid #3B82F6;
+            padding-left: 20px;
+            margin-left: 10px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #3B82F6;
+            border-radius: 50%;
+            position: absolute;
+            left: -7px;
+            top: 0;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -45,11 +75,12 @@
                     <span class="text-2xl font-bold text-blue-600">Automate<span class="text-gray-700">Devops</span></span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
+                    <a href="#solutions" class="text-gray-600 hover:text-blue-600">Solutions</a>
                     <a href="#cost-savings" class="text-gray-600 hover:text-blue-600">Cost Savings</a>
-                    <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
+                    <a href="#modernization" class="text-gray-600 hover:text-blue-600">Modernization</a>
                     <a href="#case-studies" class="text-gray-600 hover:text-blue-600">Case Studies</a>
                     <a href="#team" class="text-gray-600 hover:text-blue-600">Team</a>
-                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Contact Us</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Get Started</a>
                 </div>
             </div>
         </div>
@@ -60,16 +91,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                    Reduce Cloud Costs by Up to $50,000 Monthly
+                    Transform Your Infrastructure,<br/>Reduce Costs by Up to 60%
                 </h1>
                 <p class="mt-3 max-w-md mx-auto text-base text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                    Expert DevOps automation and cloud optimization services that deliver proven cost savings for AWS and Azure infrastructures.
+                    Specialized in legacy modernization, cloud optimization, and containerized solutions that deliver measurable cost savings and performance improvements.
                 </p>
                 <div class="mt-8 flex justify-center space-x-4">
-                    <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50">
-                        Get Your Free Cost Analysis
+                    <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition duration-300">
+                        Schedule Free Assessment
                     </a>
-                    <a href="#case-studies" class="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-blue-500">
+                    <a href="#case-studies" class="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-blue-500 transition duration-300">
                         View Success Stories
                     </a>
                 </div>
@@ -77,105 +108,95 @@
         </div>
     </div>
 
-    <!-- Cost Savings Highlights -->
-    <div id="cost-savings" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900">Proven Cost Savings</h2>
-                <p class="mt-4 text-lg text-gray-500">Real results from our recent projects</p>
+    <!-- Quick Stats Banner -->
+    <div class="stats-grid -mt-10 py-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="text-center text-white p-4">
+                <div class="text-4xl font-bold">60%</div>
+                <div class="text-sm mt-1">Average Cost Reduction</div>
             </div>
-            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <div class="savings-card p-6 rounded-lg shadow-sm">
-                    <div class="text-4xl font-bold text-blue-600">$48,500</div>
-                    <p class="text-lg font-semibold text-gray-800">Monthly AWS Savings</p>
-                    <p class="mt-2 text-gray-600">E-commerce platform cost optimization through resource right-sizing and automated scaling</p>
-                </div>
-                <div class="savings-card p-6 rounded-lg shadow-sm">
-                    <div class="text-4xl font-bold text-blue-600">$32,750</div>
-                    <p class="text-lg font-semibold text-gray-800">Monthly Azure Savings</p>
-                    <p class="mt-2 text-gray-600">FinTech application infrastructure optimization and workload management</p>
-                </div>
-                <div class="savings-card p-6 rounded-lg shadow-sm">
-                    <div class="text-4xl font-bold text-blue-600">65%</div>
-                    <p class="text-lg font-semibold text-gray-800">Average Cost Reduction</p>
-                    <p class="mt-2 text-gray-600">Typical cost savings achieved through our optimization processes</p>
-                </div>
+            <div class="text-center text-white p-4">
+                <div class="text-4xl font-bold">100+</div>
+                <div class="text-sm mt-1">Projects Delivered</div>
+            </div>
+            <div class="text-center text-white p-4">
+                <div class="text-4xl font-bold">15+</div>
+                <div class="text-sm mt-1">Years Experience</div>
+            </div>
+            <div class="text-center text-white p-4">
+                <div class="text-4xl font-bold">24/7</div>
+                <div class="text-sm mt-1">Support Available</div>
             </div>
         </div>
     </div>
-<!-- Detailed Services Section -->
-    <div id="services" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900">Our Cost-Saving Solutions</h2>
-                <p class="mt-4 text-lg text-gray-500">Comprehensive cloud optimization and DevOps automation</p>
+
+    <!-- Core Solutions -->
+    <div id="solutions" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Comprehensive DevOps Solutions</h2>
+                <p class="mt-4 text-lg text-gray-500">End-to-end services for modern infrastructure needs</p>
             </div>
-            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <!-- AWS Optimization -->
-                <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm">
                     <div class="text-blue-600 mb-4">
-                        <i class="fab fa-aws text-4xl"></i>
+                        <i class="fas fa-cloud text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900">AWS Cost Optimization</h3>
-                    <p class="mt-2 text-gray-500">Strategic cost reduction while maintaining performance</p>
+                    <h3 class="text-xl font-bold text-gray-900">Cloud Cost Optimization</h3>
                     <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Reserved Instance optimization
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Auto-scaling configuration
-                        </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
                             Resource right-sizing
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            Storage optimization
+                            Automated scaling solutions
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Cost monitoring & alerts
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Reserved instance optimization
                         </li>
                     </ul>
                 </div>
 
-                <!-- Azure Optimization -->
-                <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm">
                     <div class="text-blue-600 mb-4">
-                        <i class="fab fa-microsoft text-4xl"></i>
+                        <i class="fas fa-server text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900">Azure Cost Management</h3>
-                    <p class="mt-2 text-gray-500">Maximize Azure resource efficiency and ROI</p>
+                    <h3 class="text-xl font-bold text-gray-900">Legacy Modernization</h3>
                     <ul class="mt-4 space-y-2">
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            Azure Reserved VM Instances
+                            Application assessment
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            Resource scheduling
+                            Containerization strategy
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            Workload optimization
+                            Microservices architecture
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            License optimization
+                            Zero-downtime migration
                         </li>
                     </ul>
                 </div>
 
-                <!-- DevOps Automation -->
-                <div class="feature-card bg-white p-6 rounded-lg shadow-sm">
+                <div class="service-card bg-white p-6 rounded-lg shadow-sm">
                     <div class="text-blue-600 mb-4">
                         <i class="fas fa-cogs text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900">DevOps Automation</h3>
-                    <p class="mt-2 text-gray-500">Streamline operations and reduce manual overhead</p>
                     <ul class="mt-4 space-y-2">
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            CI/CD pipeline automation
+                            CI/CD pipeline setup
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
@@ -183,7 +204,7 @@
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            Monitoring & alerting
+                            Monitoring & logging
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
@@ -195,85 +216,377 @@
         </div>
     </div>
 
-    <!-- Case Studies Section -->
-    <div id="case-studies" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Cost Savings Section -->
+    <div id="cost-savings" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900">Success Stories</h2>
-                <p class="mt-4 text-lg text-gray-500">Real results from our cloud optimization projects</p>
+                <h2 class="text-3xl font-extrabold text-gray-900">Real Cost Savings</h2>
+                <p class="mt-4 text-lg text-gray-500">Proven results from recent client engagements</p>
             </div>
-            <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
+                <div class="savings-card p-6 rounded-lg shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600">$28,500</div>
+                    <p class="text-lg font-semibold text-gray-800">Monthly AWS Savings</p>
+                    <p class="mt-2 text-gray-600">Through containerization and resource optimization</p>
+                </div>
+                <div class="savings-card p-6 rounded-lg shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600">$32,750</div>
+                    <p class="text-lg font-semibold text-gray-800">Monthly Azure Savings</p>
+                    <p class="mt-2 text-gray-600">Via infrastructure modernization</p>
+                </div>
+                <div class="savings-card p-6 rounded-lg shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600">$25,000</div>
+                    <p class="text-lg font-semibold text-gray-800">GCP Cost Reduction</p>
+                    <p class="mt-2 text-gray-600">Through workload optimization</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modernization Journey -->
+    <div id="modernization" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Your Modernization Journey</h2>
+                <p class="mt-4 text-lg text-gray-500">From legacy systems to modern containerized solutions</p>
+            </div>
+            <div class="space-y-8">
+                <div class="timeline-item pb-8">
+                    <h3 class="text-xl font-bold text-gray-900">1. Assessment & Planning</h3>
+                    <p class="mt-2 text-gray-600">Comprehensive analysis of current infrastructure, costs, and modernization opportunities</p>
+                </div>
+                <div class="timeline-item pb-8">
+                    <h3 class="text-xl font-bold text-gray-900">2. Architecture Design</h3>
+                    <p class="mt-2 text-gray-600">Creating optimal containerization and microservices strategy</p>
+                </div>
+                <div class="timeline-item pb-8">
+                    <h3 class="text-xl font-bold text-gray-900">3. Modernization & Migration</h3>
+                    <p class="mt-2 text-gray-600">Systematic transformation with zero-downtime deployment</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="text-xl font-bold text-gray-900">4. Optimization & Support</h3>
+                    <p class="mt-2 text-gray-600">Continuous monitoring, optimization, and 24/7 support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Developer Productivity Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Maximize Developer Productivity</h2>
+                <p class="mt-4 text-lg text-gray-500">Stop waiting for deployments, start delivering value</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Left side: Benefits -->
+                <div class="space-y-6">
+                    <div class="border-l-4 border-blue-600 pl-4">
+                        <h3 class="text-xl font-bold text-gray-900">Automated Deployment Pipeline</h3>
+                        <p class="mt-2 text-gray-600">Reduce deployment time from hours to minutes with our automated CI/CD pipelines. No more manual interventions or deployment queues.</p>
+                        <div class="mt-3 text-blue-600">
+                            <span class="font-semibold">Average time saved: 4-6 hours/week per developer</span>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-blue-600 pl-4">
+                        <h3 class="text-xl font-bold text-gray-900">Self-Service Developer Portal</h3>
+                        <p class="mt-2 text-gray-600">Empower developers to manage their deployments without waiting for DevOps team intervention. Full visibility and control over the process.</p>
+                        <div class="mt-3 text-blue-600">
+                            <span class="font-semibold">Response time reduced by 85%</span>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-blue-600 pl-4">
+                        <h3 class="text-xl font-bold text-gray-900">Zero-Touch Deployments</h3>
+                        <p class="mt-2 text-gray-600">Automated testing, security scans, and deployment validation. No more fixing deployment issues or rollback headaches.</p>
+                        <div class="mt-3 text-blue-600">
+                            <span class="font-semibold">99.9% deployment success rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side: Key Metrics -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Impact on Development Teams</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Deployment Time</span>
+                            <div class="flex items-center">
+                                <span class="text-red-500 line-through mr-2">45 minutes</span>
+                                <span class="text-green-500 font-bold">3 minutes</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Deployment Success Rate</span>
+                            <div class="flex items-center">
+                                <span class="text-red-500 line-through mr-2">75%</span>
+                                <span class="text-green-500 font-bold">99.9%</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Weekly Time Saved</span>
+                            <span class="text-green-500 font-bold">4-6 hours/developer</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Manual Interventions</span>
+                            <div class="flex items-center">
+                                <span class="text-red-500 line-through mr-2">8-10/week</span>
+                                <span class="text-green-500 font-bold">0-1/week</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Features -->
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-900 mb-4">Automated Features</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Auto-scaling infrastructure
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Automated security scanning
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                One-click rollbacks
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Environment provisioning
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Studies Section -->
+    <div id="case-studies" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Success Stories</h2>
+                <p class="mt-4 text-lg text-gray-500">Real-world transformation journeys</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- E-commerce Case Study -->
-                <div class="bg-gray-50 rounded-lg p-6 feature-card">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">E-commerce Giant</div>
-                    <p class="text-gray-600 mb-4">Reduced monthly AWS costs from $82,000 to $33,500 through infrastructure optimization</p>
-                    <ul class="text-sm space-y-2">
-                        <li class="flex items-center">
+                <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                    <div class="text-blue-600 mb-4 text-lg font-semibold">Major E-commerce Platform</div>
+                    <p class="text-gray-600 mb-4">Legacy monolith to microservices transformation reducing monthly AWS costs from $52,000 to $23,500</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center text-gray-600">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>59% cost reduction</span>
+                            <span>55% infrastructure cost reduction</span>
                         </li>
-                        <li class="flex items-center">
+                        <li class="flex items-center text-gray-600">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Improved performance</span>
+                            <span>90% faster deployment cycles</span>
                         </li>
-                        <li class="flex items-center">
+                        <li class="flex items-center text-gray-600">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Automated scaling</span>
+                            <span>Zero downtime migration</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Enhanced scalability</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Healthcare Case Study -->
+                <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                    <div class="text-blue-600 mb-4 text-lg font-semibold">Healthcare Provider</div>
+                    <p class="text-gray-600 mb-4">Modernized legacy applications while maintaining HIPAA compliance, reducing costs by $32,750 monthly</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Containerized 15 legacy apps</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Enhanced security measures</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Improved system reliability</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>40% performance boost</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- FinTech Case Study -->
-                <div class="bg-gray-50 rounded-lg p-6 feature-card">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">FinTech Platform</div>
-                    <p class="text-gray-600 mb-4">Optimized Azure infrastructure reducing monthly spend from $65,000 to $32,250</p>
-                    <ul class="text-sm space-y-2">
-                        <li class="flex items-center">
+                <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                    <div class="text-blue-600 mb-4 text-lg font-semibold">FinTech Startup</div>
+                    <p class="text-gray-600 mb-4">Cloud-native transformation with advanced monitoring, saving $25,000 in monthly operational costs</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center text-gray-600">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>50% cost savings</span>
+                            <span>Automated CI/CD pipeline</span>
                         </li>
-                        <li class="flex items-center">
+                        <li class="flex items-center text-gray-600">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Enhanced security</span>
+                            <span>Real-time monitoring</span>
                         </li>
-                        <li class="flex items-center">
+                        <li class="flex items-center text-gray-600">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Improved compliance</span>
+                            <span>99.99% uptime achieved</span>
                         </li>
-                    </ul>
-                </div>
-
-                <!-- SaaS Case Study -->
-                <div class="bg-gray-50 rounded-lg p-6 feature-card">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">SaaS Provider</div>
-                    <p class="text-gray-600 mb-4">Implemented hybrid cloud strategy saving $45,000 monthly in operational costs</p>
-                    <ul class="text-sm space-y-2">
-                        <li class="flex items-center">
+                        <li class="flex items-center text-gray-600">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>67% cost reduction</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Optimized workload distribution</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Increased reliability</span>
+                            <span>Reduced deployment time by 85%</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-<!-- Team Section -->
-<!-- Team Section -->
-    <div id="team" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900">Expert Team</h2>
-                <p class="mt-4 text-lg text-gray-500">Cloud optimization and DevOps specialists</p>
+
+    <!-- Client Testimonials -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">What Our Clients Say</h2>
+                <p class="mt-4 text-lg text-gray-500">Real feedback from real clients</p>
             </div>
-            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The team's expertise in containerization and cost optimization has transformed our infrastructure. We're seeing better performance at lower costs."</p>
+                    <div class="mt-4">
+                        <p class="font-semibold text-gray-900">Sarah Chen</p>
+                        <p class="text-sm text-gray-500">CTO, TechStart Solutions</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The migration from our legacy systems was smooth and professional. Their attention to security and compliance was impressive."</p>
+                    <div class="mt-4">
+                        <p class="font-semibold text-gray-900">Michael Rodriguez</p>
+                        <p class="text-sm text-gray-500">Head of IT, HealthCare Plus</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Their DevOps automation solutions have significantly reduced our deployment time and improved our overall efficiency."</p>
+                    <div class="mt-4">
+                        <p class="font-semibold text-gray-900">Alex Thompson</p>
+                        <p class="text-sm text-gray-500">DevOps Manager, FinTech Now</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technology Stack -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Our Technology Stack</h2>
+                <p class="mt-4 text-lg text-gray-500">Modern tools for modern solutions</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <!-- Cloud Platforms -->
+                <div class="tech-icon p-4">
+                    <i class="fab fa-aws text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">AWS</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fab fa-microsoft text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Azure</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fab fa-google text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Google Cloud</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fas fa-cloud text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Multi-Cloud</p>
+                </div>
+<!-- Container & Orchestration -->
+                <div class="tech-icon p-4">
+                    <i class="fab fa-docker text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Docker</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fas fa-dharmachakra text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Kubernetes</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fas fa-box text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Containerd</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fas fa-cubes text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">OpenShift</p>
+                </div>
+
+                <!-- CI/CD & Automation -->
+                <div class="tech-icon p-4">
+                    <i class="fab fa-jenkins text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Jenkins</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fab fa-github text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">GitHub Actions</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fab fa-gitlab text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">GitLab CI</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fas fa-code-branch text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">ArgoCD</p>
+                </div>
+
+                <!-- Monitoring & Security -->
+                <div class="tech-icon p-4">
+                    <i class="fas fa-chart-line text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Prometheus</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fas fa-chart-area text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Grafana</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fas fa-shield-alt text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Vault</p>
+                </div>
+                <div class="tech-icon p-4">
+                    <i class="fas fa-lock text-5xl text-gray-700"></i>
+                    <p class="mt-2 text-gray-600">Security Tools</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div id="team" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Our Expert Team</h2>
+                <p class="mt-4 text-lg text-gray-500">Industry veterans with proven expertise</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Hritik's Profile -->
                 <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card">
                     <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
@@ -293,7 +606,6 @@
                             <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
-                    <p class="mt-2 text-sm text-gray-600">+91 8859820935</p>
                 </div>
 
                 <!-- Keshav's Profile -->
@@ -315,7 +627,6 @@
                             <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
-                    <p class="mt-2 text-sm text-gray-600">+91 7017323865</p>
                 </div>
 
                 <!-- Sumit's Profile -->
@@ -337,7 +648,6 @@
                             <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
-                    <p class="mt-2 text-sm text-gray-600">+91 8859820935</p>
                 </div>
 
                 <!-- Giri's Profile -->
@@ -359,30 +669,55 @@
                             <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
-                    <p class="mt-2 text-sm text-gray-600">+91 7017323865</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact Section -->
-    <div id="contact" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Contact Section -->
+    <div id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Start Saving Today</h2>
-                <p class="mt-4 text-lg text-gray-500">Get your free cost optimization analysis</p>
-                <div class="mt-4 space-y-2">
-                    <p class="flex items-center justify-center text-gray-600">
-                        <i class="fas fa-envelope mr-2"></i>
-                        <a href="mailto:hritikchaudhary016@gmail.com" class="text-blue-600 hover:text-blue-800">hritikchaudhary016@gmail.com</a>
-                    </p>
-                    <p class="flex items-center justify-center text-gray-600">
-                        <i class="fas fa-phone mr-2"></i>
-                        <a href="tel:+918859820935" class="text-blue-600 hover:text-blue-800">+91 8859820935</a>
-                    </p>
+                <h2 class="text-3xl font-extrabold text-gray-900">Start Your Transformation</h2>
+                <p class="mt-4 text-lg text-gray-500">Get your free infrastructure assessment today</p>
+            </div>
+            
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-phone-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Call Us</h3>
+                    <p class="mt-2 text-gray-600">24/7 Support Available</p>
+                    <a href="tel:+918859820935" class="mt-4 inline-block text-blue-600 hover:text-blue-800">
+                        Schedule a Call
+                    </a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fab fa-whatsapp text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">WhatsApp</h3>
+                    <p class="mt-2 text-gray-600">Quick Responses</p>
+                    <a href="https://wa.me/918859820935" class="mt-4 inline-block text-blue-600 hover:text-blue-800">
+                        Message Us
+                    </a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-envelope text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Email</h3>
+                    <p class="mt-2 text-gray-600">Detailed Inquiries</p>
+                    <a href="mailto:hritikchaudhary016@gmail.com" class="mt-4 inline-block text-blue-600 hover:text-blue-800">
+                        Email Us
+                    </a>
                 </div>
             </div>
 
-            <!-- Google Form Integration -->
+            <!-- Contact Form (Google Form Integration) -->
             <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-sm overflow-hidden">
                 <iframe 
                     src="https://docs.google.com/forms/d/e/1FAIpQLSe8LB6d2f6ncUbyPNS2_OxTvdF00a-TZqvSGOj4GarqmQTlEA/viewform?embedded=true" 
@@ -399,21 +734,21 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 pt-12 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Company Info -->
                 <div class="col-span-2">
                     <h3 class="text-2xl font-bold text-white">Automate<span class="text-blue-400">Devops</span></h3>
-                    <p class="mt-4 text-gray-300">Helping businesses reduce cloud costs and optimize DevOps workflows.</p>
+                    <p class="mt-4 text-gray-300">Transform your infrastructure with our expert cloud optimization and modernization solutions.</p>
                     <div class="mt-4 flex space-x-4">
                         <a href="mailto:hritikchaudhary016@gmail.com" class="text-gray-400 hover:text-white">
                             <i class="fas fa-envelope text-xl"></i>
                         </a>
-                        <a href="tel:+918859820935" class="text-gray-400 hover:text-white">
-                            <i class="fas fa-phone text-xl"></i>
-                        </a>
                         <a href="https://wa.me/918859820935" class="text-gray-400 hover:text-white">
                             <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin text-xl"></i>
                         </a>
                     </div>
                 </div>
@@ -422,8 +757,9 @@
                 <div>
                     <h4 class="text-lg font-semibold text-white mb-4">Services</h4>
                     <ul class="space-y-2">
+                        <li><a href="#solutions" class="text-gray-300 hover:text-white">Cloud Solutions</a></li>
+                        <li><a href="#modernization" class="text-gray-300 hover:text-white">Modernization</a></li>
                         <li><a href="#cost-savings" class="text-gray-300 hover:text-white">Cost Optimization</a></li>
-                        <li><a href="#services" class="text-gray-300 hover:text-white">Cloud Services</a></li>
                         <li><a href="#case-studies" class="text-gray-300 hover:text-white">Success Stories</a></li>
                     </ul>
                 </div>
@@ -435,6 +771,10 @@
                         <li class="text-gray-300">
                             <i class="fas fa-envelope mr-2"></i>
                             <a href="mailto:hritikchaudhary016@gmail.com" class="hover:text-white">Email Us</a>
+                        </li>
+                        <li class="text-gray-300">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            <a href="https://wa.me/918859820935" class="hover:text-white">WhatsApp</a>
                         </li>
                         <li class="text-gray-300">
                             <i class="fas fa-phone mr-2"></i>
