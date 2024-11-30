@@ -717,89 +717,106 @@
         </div>
     </div>
 
-    <!-- Case Studies Section -->
-    <div id="case-studies" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Success Stories</h2>
-                <p class="mt-4 text-lg text-gray-500">Real-world transformation journeys</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- E-commerce Case Study -->
-                <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">Major E-commerce Platform</div>
-                    <p class="text-gray-600 mb-4">Legacy monolith to microservices transformation reducing monthly AWS costs from $52,000 to $23,500</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>55% infrastructure cost reduction</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>90% faster deployment cycles</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Zero downtime migration</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Enhanced scalability</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Healthcare Case Study -->
-                <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">Healthcare Provider</div>
-                    <p class="text-gray-600 mb-4">Modernized legacy applications while maintaining HIPAA compliance, reducing costs by $32,750 monthly</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Containerized 15 legacy apps</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Enhanced security measures</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Improved system reliability</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>40% performance boost</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- FinTech Case Study -->
-                <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">FinTech Startup</div>
-                    <p class="text-gray-600 mb-4">Cloud-native transformation with advanced monitoring, saving $25,000 in monthly operational costs</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Automated CI/CD pipeline</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Real-time monitoring</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>99.99% uptime achieved</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Reduced deployment time by 85%</span>
-                        </li>
-                    </ul>
+<!-- Replace your existing case studies section with this -->
+<div id="case-studies" class="py-16 bg-gray-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900">Success Stories</h2>
+            <p class="mt-4 text-lg text-gray-500">Real-world transformation journeys</p>
+        </div>
+        
+        <!-- Success Stories Carousel -->
+        <div class="relative">
+            <div class="success-stories-container overflow-hidden">
+                <div class="success-stories-track flex animate-scroll">
+                    <!-- First Set -->
+                    <div class="min-w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- E-commerce Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">E-commerce Giant</div>
+                            <p class="text-gray-600 mb-4">Reduced deployment time from 45min to 3min</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$28.5K</div>
+                            <p class="text-sm text-gray-500">Monthly Cloud Savings</p>
+                        </div>
+                        <!-- Healthcare Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">Healthcare Provider</div>
+                            <p class="text-gray-600 mb-4">99.99% Deployment Success Rate</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$32.7K</div>
+                            <p class="text-sm text-gray-500">Monthly Cost Reduction</p>
+                        </div>
+                        <!-- FinTech Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">FinTech Platform</div>
+                            <p class="text-gray-600 mb-4">Zero-touch deployment achieved</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$25K</div>
+                            <p class="text-sm text-gray-500">Monthly Infrastructure Savings</p>
+                        </div>
+                    </div>
+                    <!-- Second Set -->
+                    <div class="min-w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- SaaS Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">SaaS Company</div>
+                            <p class="text-gray-600 mb-4">15hrs/week developer time saved</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$22K</div>
+                            <p class="text-sm text-gray-500">Monthly Cost Optimization</p>
+                        </div>
+                        <!-- Retail Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">Retail Chain</div>
+                            <p class="text-gray-600 mb-4">95% Automation Achievement</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$18K</div>
+                            <p class="text-sm text-gray-500">Monthly Cloud Savings</p>
+                        </div>
+                        <!-- EdTech Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">EdTech Startup</div>
+                            <p class="text-gray-600 mb-4">2min average deployment time</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$15K</div>
+                            <p class="text-sm text-gray-500">Monthly Cost Reduction</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
+<style>
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    50.01% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 20s linear infinite;
+}
+
+.success-stories-track:hover {
+    animation-play-state: paused;
+}
+
+.success-stories-container {
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+}
+</style>
     <!-- Client Testimonials -->
     <div class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
