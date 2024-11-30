@@ -206,18 +206,30 @@
     }
     
     .carousel-card {
-        min-width: 350px;
-        margin: 0 20px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .carousel-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-        border-color: #3B82F6;
-        z-index: 10;
-    }
+    min-width: 350px;
+    margin: 0 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: auto;        /* Add this */
+    padding: 2rem;       /* Add this */
+    overflow: visible;   /* Add this */
+    position: relative;  /* Add this */
+}
+
+.carousel-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border-color: #3B82F6;
+    z-index: 20;        /* Increase this */
+}
+
+/* Add this to ensure content stays visible */
+.carousel-container {
+    overflow: visible;   /* Change from hidden to visible */
+    position: relative;
+    padding: 20px 0;
+    margin: 0 -20px;
+}
     
     .fade-edges {
         mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -263,6 +275,43 @@
         background: linear-gradient(45deg, #2563EB, #3B82F6);
         transform: scale(1.1);
     }
+
+    .metric-comparison {
+    transition: all 0.3s ease;
+}
+
+.metric-comparison:hover {
+    transform: translateX(10px);
+}
+
+.feature-border {
+    border-left: 4px solid #3B82F6;
+    transition: all 0.3s ease;
+}
+
+.feature-border:hover {
+    border-left: 8px solid #2563EB;
+    background: linear-gradient(90deg, rgba(59,130,246,0.1) 0%, rgba(255,255,255,0) 100%);
+    transform: translateX(10px);
+}
+
+.automated-feature {
+    transition: all 0.3s ease;
+}
+
+.automated-feature:hover {
+    transform: translateX(5px);
+    color: #3B82F6;
+}
+
+.stat-value {
+    transition: all 0.3s ease;
+}
+
+.stat-value:hover {
+    transform: scale(1.05);
+    color: #3B82F6;
+}
     </style>
 </head>
 <body class="bg-gray-50">
@@ -584,105 +633,115 @@
         </div>
     </div>
 
+<!-- Developer Productivity Section -->
+<div class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900">Maximize Developer Productivity</h2>
+            <p class="mt-4 text-lg text-gray-500">Stop waiting for deployments, start delivering value</p>
+        </div>
 
-    <!-- Developer Productivity Section -->
-    <div class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Maximize Developer Productivity</h2>
-                <p class="mt-4 text-lg text-gray-500">Stop waiting for deployments, start delivering value</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Left side: Benefits -->
+            <div class="space-y-6">
+                <div class="feature-border pl-6 py-4 rounded-r-lg">
+                    <h3 class="text-xl font-bold text-gray-900">Automated Deployment Pipeline</h3>
+                    <p class="mt-2 text-gray-600">Reduce deployment time from hours to minutes with our automated CI/CD pipelines. No more manual interventions or deployment queues.</p>
+                    <div class="mt-3 text-blue-600">
+                        <span class="font-semibold flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            Average time saved: 4-6 hours/week per developer
+                        </span>
+                    </div>
+                </div>
+
+                <div class="feature-border pl-6 py-4 rounded-r-lg">
+                    <h3 class="text-xl font-bold text-gray-900">Self-Service Developer Portal</h3>
+                    <p class="mt-2 text-gray-600">Empower developers to manage their deployments without waiting for DevOps team intervention. Full visibility and control over the process.</p>
+                    <div class="mt-3 text-blue-600">
+                        <span class="font-semibold flex items-center">
+                            <i class="fas fa-tachometer-alt mr-2"></i>
+                            Response time reduced by 85%
+                        </span>
+                    </div>
+                </div>
+
+                <div class="feature-border pl-6 py-4 rounded-r-lg">
+                    <h3 class="text-xl font-bold text-gray-900">Zero-Touch Deployments</h3>
+                    <p class="mt-2 text-gray-600">Automated testing, security scans, and deployment validation. No more fixing deployment issues or rollback headaches.</p>
+                    <div class="mt-3 text-blue-600">
+                        <span class="font-semibold flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            99.9% deployment success rate
+                        </span>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Left side: Benefits -->
+            <!-- Right side: Key Metrics -->
+            <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                <h3 class="text-xl font-bold text-gray-900 mb-6">Impact on Development Teams</h3>
+                
                 <div class="space-y-6">
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <h3 class="text-xl font-bold text-gray-900">Automated Deployment Pipeline</h3>
-                        <p class="mt-2 text-gray-600">Reduce deployment time from hours to minutes with our automated CI/CD pipelines. No more manual interventions or deployment queues.</p>
-                        <div class="mt-3 text-blue-600">
-                            <span class="font-semibold">Average time saved: 4-6 hours/week per developer</span>
+                    <div class="metric-comparison flex items-center justify-between p-3 rounded-lg hover:bg-white">
+                        <span class="text-gray-600">Deployment Time</span>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-red-500 line-through">45 minutes</span>
+                            <span class="text-green-500 font-bold stat-value">3 minutes</span>
                         </div>
                     </div>
 
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <h3 class="text-xl font-bold text-gray-900">Self-Service Developer Portal</h3>
-                        <p class="mt-2 text-gray-600">Empower developers to manage their deployments without waiting for DevOps team intervention. Full visibility and control over the process.</p>
-                        <div class="mt-3 text-blue-600">
-                            <span class="font-semibold">Response time reduced by 85%</span>
+                    <div class="metric-comparison flex items-center justify-between p-3 rounded-lg hover:bg-white">
+                        <span class="text-gray-600">Deployment Success Rate</span>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-red-500 line-through">75%</span>
+                            <span class="text-green-500 font-bold stat-value">99.9%</span>
                         </div>
                     </div>
 
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <h3 class="text-xl font-bold text-gray-900">Zero-Touch Deployments</h3>
-                        <p class="mt-2 text-gray-600">Automated testing, security scans, and deployment validation. No more fixing deployment issues or rollback headaches.</p>
-                        <div class="mt-3 text-blue-600">
-                            <span class="font-semibold">99.9% deployment success rate</span>
+                    <div class="metric-comparison flex items-center justify-between p-3 rounded-lg hover:bg-white">
+                        <span class="text-gray-600">Weekly Time Saved</span>
+                        <span class="text-green-500 font-bold stat-value">4-6 hours/developer</span>
+                    </div>
+
+                    <div class="metric-comparison flex items-center justify-between p-3 rounded-lg hover:bg-white">
+                        <span class="text-gray-600">Manual Interventions</span>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-red-500 line-through">8-10/week</span>
+                            <span class="text-green-500 font-bold stat-value">0-1/week</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right side: Key Metrics -->
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-gray-900 mb-6">Impact on Development Teams</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-600">Deployment Time</span>
-                            <div class="flex items-center">
-                                <span class="text-red-500 line-through mr-2">45 minutes</span>
-                                <span class="text-green-500 font-bold">3 minutes</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-600">Deployment Success Rate</span>
-                            <div class="flex items-center">
-                                <span class="text-red-500 line-through mr-2">75%</span>
-                                <span class="text-green-500 font-bold">99.9%</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-600">Weekly Time Saved</span>
-                            <span class="text-green-500 font-bold">4-6 hours/developer</span>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-600">Manual Interventions</span>
-                            <div class="flex items-center">
-                                <span class="text-red-500 line-through mr-2">8-10/week</span>
-                                <span class="text-green-500 font-bold">0-1/week</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional Features -->
-                    <div class="mt-8">
-                        <h4 class="font-semibold text-gray-900 mb-4">Automated Features</h4>
-                        <ul class="space-y-2">
-                            <li class="flex items-center text-gray-600">
-                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                Auto-scaling infrastructure
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                Automated security scanning
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                One-click rollbacks
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                Environment provisioning
-                            </li>
-                        </ul>
-                    </div>
+                <!-- Additional Features -->
+                <div class="mt-8">
+                    <h4 class="font-semibold text-gray-900 mb-4">Automated Features</h4>
+                    <ul class="space-y-3">
+                        <li class="automated-feature flex items-center text-gray-600 p-2 rounded-lg hover:bg-white">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Auto-scaling infrastructure
+                        </li>
+                        <li class="automated-feature flex items-center text-gray-600 p-2 rounded-lg hover:bg-white">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Automated security scanning
+                        </li>
+                        <li class="automated-feature flex items-center text-gray-600 p-2 rounded-lg hover:bg-white">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            One-click rollbacks
+                        </li>
+                        <li class="automated-feature flex items-center text-gray-600 p-2 rounded-lg hover:bg-white">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Environment provisioning
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
+ 
 
+ <!-- Automation  plans -->
     <div class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-12">
