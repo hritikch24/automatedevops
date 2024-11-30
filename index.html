@@ -121,7 +121,149 @@
     <!-- Add preload for critical resources -->
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js">
-
+<!-- Add this inside your head tag -->
+<style>
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    .carousel-container {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    
+    .carousel-track {
+        animation: scroll 40s linear infinite;
+        display: flex;
+        width: fit-content;
+    }
+    
+    .carousel-track:hover {
+        animation-play-state: paused;
+    }
+    
+    .success-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(59, 130, 246, 0.1);
+    }
+    
+    .success-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border-color: #3B82F6;
+        background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    }
+    
+    .testimonial-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .fade-edges {
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    
+    .metric-value {
+        background: linear-gradient(45deg, #3B82F6, #60A5FA);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    </style>
+<style>
+    @keyframes scrollX {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    .carousel-container {
+        overflow: hidden;
+        position: relative;
+        padding: 20px 0;
+        margin: 0 -20px;
+    }
+    
+    .carousel-track {
+        display: flex;
+        animation: scrollX 30s linear infinite;
+        width: fit-content;
+    }
+    
+    .carousel-track:hover {
+        animation-play-state: paused;
+    }
+    
+    .carousel-card {
+        min-width: 350px;
+        margin: 0 20px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .carousel-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        border-color: #3B82F6;
+        z-index: 10;
+    }
+    
+    .fade-edges {
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    
+    .floating-animation {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    /* Enhanced testimonial cards */
+    .enhanced-testimonial {
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+    }
+    
+    .enhanced-testimonial:hover {
+        transform: scale(1.05);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: #3B82F6;
+        background: linear-gradient(145deg, #ffffff 0%, #f3f4f6 100%);
+    }
+    
+    .quote-icon {
+        transition: all 0.3s ease;
+    }
+    
+    .enhanced-testimonial:hover .quote-icon {
+        transform: scale(1.1) rotate(-10deg);
+        color: #2563EB;
+    }
+    
+    /* Success metrics animation */
+    .metric-value {
+        transition: all 0.3s ease;
+        background: linear-gradient(45deg, #3B82F6, #60A5FA);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .carousel-card:hover .metric-value {
+        background: linear-gradient(45deg, #2563EB, #3B82F6);
+        transform: scale(1.1);
+    }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -717,64 +859,174 @@
         </div>
     </div>
 
-<!-- Replace your existing case studies section with this -->
+<!-- Case Studies Section -->
 <div id="case-studies" class="py-16 bg-gray-50 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-extrabold text-gray-900">Success Stories</h2>
-            <p class="mt-4 text-lg text-gray-500">Real-world transformation journeys</p>
+            <p class="mt-4 text-lg text-gray-500">Real transformation journeys</p>
+        </div>
+
+        <div class="carousel-container fade-edges">
+            <div class="carousel-track">
+                <!-- First Set -->
+                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4 text-lg font-semibold">E-commerce Giant</div>
+                    <div class="metric-value text-4xl font-bold mb-2">$28.5K</div>
+                    <p class="text-gray-600">Monthly Cloud Savings</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>45min → 3min deployment</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>95% automation achieved</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4 text-lg font-semibold">Healthcare Provider</div>
+                    <div class="metric-value text-4xl font-bold mb-2">$32.7K</div>
+                    <p class="text-gray-600">Monthly Cost Reduction</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Zero-touch deployment</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>99.99% uptime achieved</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4 text-lg font-semibold">FinTech Platform</div>
+                    <div class="metric-value text-4xl font-bold mb-2">$25K</div>
+                    <p class="text-gray-600">Monthly Optimization</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Full CI/CD automation</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>15hrs/week saved</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Duplicate Set for Continuous Scroll -->
+                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4 text-lg font-semibold">SaaS Provider</div>
+                    <div class="metric-value text-4xl font-bold mb-2">$22K</div>
+                    <p class="text-gray-600">Monthly Cost Optimization</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>8hrs/week dev time saved</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>90% deployment automation</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4 text-lg font-semibold">Retail Chain</div>
+                    <div class="metric-value text-4xl font-bold mb-2">$18K</div>
+                    <p class="text-gray-600">Monthly Cloud Savings</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Peak season ready</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>300% performance gain</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Client Testimonials -->
+<div class="py-16 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900">What Our Clients Say</h2>
+            <p class="mt-4 text-lg text-gray-500">Real feedback from real clients</p>
         </div>
         
-        <!-- Success Stories Carousel -->
-        <div class="relative">
-            <div class="success-stories-container overflow-hidden">
-                <div class="success-stories-track flex animate-scroll">
-                    <!-- First Set -->
-                    <div class="min-w-full grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- E-commerce Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">E-commerce Giant</div>
-                            <p class="text-gray-600 mb-4">Reduced deployment time from 45min to 3min</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$28.5K</div>
-                            <p class="text-sm text-gray-500">Monthly Cloud Savings</p>
+        <div class="carousel-container fade-edges">
+            <div class="carousel-track">
+                <!-- First Set of Testimonials -->
+                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Their automation expertise transformed our deployment process. We've cut our cloud costs significantly while improving performance."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                            MT
                         </div>
-                        <!-- Healthcare Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">Healthcare Provider</div>
-                            <p class="text-gray-600 mb-4">99.99% Deployment Success Rate</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$32.7K</div>
-                            <p class="text-sm text-gray-500">Monthly Cost Reduction</p>
-                        </div>
-                        <!-- FinTech Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">FinTech Platform</div>
-                            <p class="text-gray-600 mb-4">Zero-touch deployment achieved</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$25K</div>
-                            <p class="text-sm text-gray-500">Monthly Infrastructure Savings</p>
+                        <div class="ml-4">
+                            <p class="font-semibold text-gray-900">Mike Thompson</p>
+                            <p class="text-sm text-gray-500">CTO, TechCorp</p>
                         </div>
                     </div>
-                    <!-- Second Set -->
-                    <div class="min-w-full grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- SaaS Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">SaaS Company</div>
-                            <p class="text-gray-600 mb-4">15hrs/week developer time saved</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$22K</div>
-                            <p class="text-sm text-gray-500">Monthly Cost Optimization</p>
+                </div>
+
+                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The migration from our legacy systems was smooth and professional. Their attention to security and compliance was impressive."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                            SR
                         </div>
-                        <!-- Retail Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">Retail Chain</div>
-                            <p class="text-gray-600 mb-4">95% Automation Achievement</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$18K</div>
-                            <p class="text-sm text-gray-500">Monthly Cloud Savings</p>
+                        <div class="ml-4">
+                            <p class="font-semibold text-gray-900">Sarah Rodriguez</p>
+                            <p class="text-sm text-gray-500">Head of IT, HealthCare Plus</p>
                         </div>
-                        <!-- EdTech Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">EdTech Startup</div>
-                            <p class="text-gray-600 mb-4">2min average deployment time</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$15K</div>
-                            <p class="text-sm text-gray-500">Monthly Cost Reduction</p>
+                    </div>
+                </div>
+
+                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Our developers can now focus on coding instead of dealing with deployment issues. The automation is seamless."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                            AK
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-semibold text-gray-900">Alex Kumar</p>
+                            <p class="text-sm text-gray-500">DevOps Lead, FinTech Now</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duplicate Set for Continuous Scroll -->
+                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The cost savings exceeded our expectations. Their team's expertise in cloud optimization is outstanding."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                            DP
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-semibold text-gray-900">David Patel</p>
+                            <p class="text-sm text-gray-500">CIO, Retail Chain</p>
                         </div>
                     </div>
                 </div>
@@ -782,84 +1034,6 @@
         </div>
     </div>
 </div>
-
-<style>
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-100%);
-    }
-    50.01% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.animate-scroll {
-    animation: scroll 20s linear infinite;
-}
-
-.success-stories-track:hover {
-    animation-play-state: paused;
-}
-
-.success-stories-container {
-    mask-image: linear-gradient(
-        to right,
-        transparent,
-        black 10%,
-        black 90%,
-        transparent
-    );
-}
-</style>
-    <!-- Client Testimonials -->
-    <div class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">What Our Clients Say</h2>
-                <p class="mt-4 text-lg text-gray-500">Real feedback from real clients</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="testimonial-card p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <p class="text-gray-600 mb-4">"The team's expertise in containerization and cost optimization has transformed our infrastructure. We're seeing better performance at lower costs."</p>
-                    <div class="mt-4">
-                        <p class="font-semibold text-gray-900">Sarah Chen</p>
-                        <p class="text-sm text-gray-500">CTO, TechStart Solutions</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <p class="text-gray-600 mb-4">"The migration from our legacy systems was smooth and professional. Their attention to security and compliance was impressive."</p>
-                    <div class="mt-4">
-                        <p class="font-semibold text-gray-900">Michael Rodriguez</p>
-                        <p class="text-sm text-gray-500">Head of IT, HealthCare Plus</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <p class="text-gray-600 mb-4">"Their DevOps automation solutions have significantly reduced our deployment time and improved our overall efficiency."</p>
-                    <div class="mt-4">
-                        <p class="font-semibold text-gray-900">Alex Thompson</p>
-                        <p class="text-sm text-gray-500">DevOps Manager, FinTech Now</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Technology Stack -->
     <div class="py-16 bg-gray-50">
