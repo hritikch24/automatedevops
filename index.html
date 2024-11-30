@@ -50,7 +50,7 @@
         "Cloud Cost Optimization",
         "Infrastructure Modernization",
         "Legacy System Migration",
-        "Container Deployment"  
+        "Container Deployment"
       ],
       "areaServed": {
         "@type": "Country",
@@ -61,7 +61,7 @@
         "priceCurrency": "USD",
         "lowPrice": "999",
         "highPrice": "9999",
-        "offerCount": "3"  
+        "offerCount": "3"
       },
       "sameAs": [
         "https://github.com/automatedevops",
@@ -121,235 +121,7 @@
     <!-- Add preload for critical resources -->
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js">
-<!-- Add this inside your head tag -->
-<style>
-    @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
-    
-    .carousel-container {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-    }
-    
-    .carousel-track {
-        animation: scroll 40s linear infinite;
-        display: flex;
-        width: fit-content;
-    }
-    
-    .carousel-track:hover {
-        animation-play-state: paused;
-    }
-    
-    .success-card {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid rgba(59, 130, 246, 0.1);
-    }
-    
-    .success-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        border-color: #3B82F6;
-        background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-    }
-    
-    .testimonial-card {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .testimonial-card:hover {
-        transform: translateY(-5px) scale(1.03);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-    
-    .fade-edges {
-        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    }
-    
-    .metric-value {
-        background: linear-gradient(45deg, #3B82F6, #60A5FA);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    .carousel-card {
-        min-width: 350px;
-        margin: 0 20px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        height: auto;        /* Add this */
-        padding: 2rem;       /* Add this */
-        overflow: visible;   /* Add this */
-        position: relative;  /* Add this */
-    }
 
-    .carousel-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-        border-color: #3B82F6;
-        z-index: 20;        /* Increase this */
-    }
-
-    /* Add this to ensure content stays visible */
-    .carousel-container {
-        overflow: visible !important;   /* Change from hidden to visible, add !important */
-        position: relative;
-        padding: 20px 0;
-        margin: 0 -20px;
-        z-index: 10;  /* Add lower z-index to keep content on top */
-    }
-
-    @keyframes scrollX {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
-    
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-
-    .floating-animation {
-        animation: float 6s ease-in-out infinite;
-    }
-    
-    /* Enhanced testimonial cards */
-    .enhanced-testimonial {
-        transition: all 0.3s ease;
-        border: 1px solid transparent;
-    }
-    
-    .enhanced-testimonial:hover {
-        transform: scale(1.05);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        border-color: #3B82F6;
-        background: linear-gradient(145deg, #ffffff 0%, #f3f4f6 100%);
-    }
-    
-    .quote-icon {
-        transition: all 0.3s ease;
-    }
-    
-    .enhanced-testimonial:hover .quote-icon {
-        transform: scale(1.1) rotate(-10deg);
-        color: #2563EB;
-    }
-    
-    /* Success metrics animation */
-    .metric-value {
-        transition: all 0.3s ease;
-        background: linear-gradient(45deg, #3B82F6, #60A5FA);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    .carousel-card:hover .metric-value {
-        background: linear-gradient(45deg, #2563EB, #3B82F6);
-        transform: scale(1.1);
-    }
-
-    .metric-comparison {
-    transition: all 0.3s ease;
-}
-
-.metric-comparison:hover {
-    transform: translateX(10px);
-}
-
-.feature-border {
-    border-left: 4px solid #3B82F6;
-    transition: all 0.3s ease;
-}
-
-.feature-border:hover {
-    border-left: 8px solid #2563EB;
-    background: linear-gradient(90deg, rgba(59,130,246,0.1) 0%, rgba(255,255,255,0) 100%);
-    transform: translateX(10px);
-}
-
-.automated-feature {
-    transition: all 0.3s ease;
-}
-
-.automated-feature:hover {
-    transform: translateX(5px);
-    color: #3B82F6;
-}
-
-.stat-value {
-    transition: all 0.3s ease;
-}
-
-.stat-value:hover {
-    transform: scale(1.05);
-    color: #3B82F6;
-}
-
-/* Add gradient border to contact cards */
-.contact-card {
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.contact-card::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    z-index: -1;
-    background: linear-gradient(135deg, #2563EB, #60A5FA);
-    transition: all 0.3s ease;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 20px -10px rgba(37, 99, 235, 0.4);
-}
-
-.contact-card:hover::before {
-    filter: blur(10px);
-}
-
-/* Add parallax effect to hero section */
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Add glow effect to headings */
-.glow {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-/* Add smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Add scroll reveal animations */
-.scroll-reveal {
-    opacity: 0;
-    transition: all 1s ease;
-}
-
-.scroll-reveal.active {
-    opacity: 1;
-}
-
-    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -371,19 +143,17 @@ html {
         </div>
     </nav>
 
-    <!-- ... (previous code remains the same) ... -->
-
     <!-- Hero Section -->
-    <div class="gradient-bg pt-32 pb-20 parallax">
+    <div class="gradient-bg pt-32 pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl glow scroll-reveal">
+                <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
                     Transform Your Infrastructure,<br/>Reduce Costs by Up to 60%
                 </h1>
-                <p class="mt-3 max-w-md mx-auto text-base text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl scroll-reveal">
+                <p class="mt-3 max-w-md mx-auto text-base text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                     Specialized in legacy modernization, cloud optimization, and containerized solutions that deliver measurable cost savings and performance improvements.
                 </p>
-                <div class="mt-8 flex justify-center space-x-4 scroll-reveal">
+                <div class="mt-8 flex justify-center space-x-4">
                     <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition duration-300">
                         Schedule Free Assessment
                     </a>
@@ -420,11 +190,11 @@ html {
     <!-- Core Solutions -->
     <div id="solutions" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12 scroll-reveal">
+            <div class="text-center mb-12">
                 <h2 class="text-3xl font-extrabold text-gray-900">Comprehensive DevOps Solutions</h2>
                 <p class="mt-4 text-lg text-gray-500">End-to-end services for modern infrastructure needs</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 scroll-reveal">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="service-card bg-white p-6 rounded-lg shadow-sm">
                     <div class="text-blue-600 mb-4">
                         <i class="fas fa-cloud text-4xl"></i>
@@ -437,7 +207,7 @@ html {
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            Automated scaling solutions  
+                            Automated scaling solutions
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
@@ -462,7 +232,7 @@ html {
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            Containerization strategy 
+                            Containerization strategy
                         </li>
                         <li class="flex items-center text-gray-600">
                             <i class="fas fa-check text-green-500 mr-2"></i>
@@ -506,14 +276,14 @@ html {
 <!-- Solutions for Different Scales Section -->
 <div class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12 scroll-reveal">
+        <div class="text-center mb-12">
             <h2 class="text-3xl font-extrabold text-gray-900">Solutions for Every Scale</h2>
             <p class="mt-4 text-lg text-gray-500">From ambitious startups to large enterprises, we deliver value at any scale</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             <!-- For Startups -->
-            <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-sm border border-blue-100 scroll-reveal">
+            <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-sm border border-blue-100">
                 <div class="flex items-center mb-6">
                     <div class="bg-blue-600 p-3 rounded-lg">
                         <i class="fas fa-rocket text-2xl text-white"></i>
@@ -553,7 +323,7 @@ html {
             </div>
 
             <!-- For Enterprises -->
-            <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-sm border border-gray-100 scroll-reveal">
+            <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-sm border border-gray-100">
                 <div class="flex items-center mb-6">
                     <div class="bg-gray-800 p-3 rounded-lg">
                         <i class="fas fa-building text-2xl text-white"></i>
@@ -595,19 +365,19 @@ html {
 
         <!-- Success Stories Preview -->
         <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 scroll-reveal">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
                 <p class="text-sm text-blue-600 font-semibold">Startup Success</p>
                 <h4 class="mt-2 font-bold text-gray-900">FinTech Startup</h4>
                 <p class="mt-2 text-gray-600">Reduced deployment time from 30 mins to 2 mins. Monthly savings: $3,500</p>
             </div>
 
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 scroll-reveal">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
                 <p class="text-sm text-blue-600 font-semibold">Mid-Size Business</p>
                 <h4 class="mt-2 font-bold text-gray-900">E-commerce Platform</h4>
                 <p class="mt-2 text-gray-600">Automated 95% of deployments. Monthly savings: $8,500</p>
             </div>
 
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 scroll-reveal">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
                 <p class="text-sm text-blue-600 font-semibold">Enterprise Scale</p>
                 <h4 class="mt-2 font-bold text-gray-900">Healthcare Provider</h4>
                 <p class="mt-2 text-gray-600">Full infrastructure automation. Monthly savings: $15,750</p>
@@ -620,11 +390,11 @@ html {
     <!-- Cost Savings Section -->
     <div id="cost-savings" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center scroll-reveal">
+            <div class="text-center">
                 <h2 class="text-3xl font-extrabold text-gray-900">Real Cost Savings</h2>
                 <p class="mt-4 text-lg text-gray-500">Proven results from recent client engagements</p>
             </div>
-            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3 scroll-reveal">
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
                 <div class="savings-card p-6 rounded-lg shadow-sm">
                     <div class="text-4xl font-bold text-blue-600">$28,500</div>
                     <p class="text-lg font-semibold text-gray-800">Monthly AWS Savings</p>
@@ -635,7 +405,7 @@ html {
                     <p class="text-lg font-semibold text-gray-800">Monthly Azure Savings</p>
                     <p class="mt-2 text-gray-600">Via infrastructure modernization</p>
                 </div>
-<div class="savings-card p-6 rounded-lg shadow-sm">
+                <div class="savings-card p-6 rounded-lg shadow-sm">
                     <div class="text-4xl font-bold text-blue-600">$25,000</div>
                     <p class="text-lg font-semibold text-gray-800">GCP Cost Reduction</p>
                     <p class="mt-2 text-gray-600">Through workload optimization</p>
@@ -647,11 +417,11 @@ html {
     <!-- Modernization Journey -->
     <div id="modernization" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12 scroll-reveal">
+            <div class="text-center mb-12">
                 <h2 class="text-3xl font-extrabold text-gray-900">Your Modernization Journey</h2>
                 <p class="mt-4 text-lg text-gray-500">From legacy systems to modern containerized solutions</p>
             </div>
-            <div class="space-y-8 scroll-reveal">
+            <div class="space-y-8">
                 <div class="timeline-item pb-8">
                     <h3 class="text-xl font-bold text-gray-900">1. Assessment & Planning</h3>
                     <p class="mt-2 text-gray-600">Comprehensive analysis of current infrastructure, costs, and modernization opportunities</p>
@@ -672,125 +442,115 @@ html {
         </div>
     </div>
 
-<!-- Developer Productivity Section -->
-<div class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12 scroll-reveal">
-            <h2 class="text-3xl font-extrabold text-gray-900">Maximize Developer Productivity</h2>
-            <p class="mt-4 text-lg text-gray-500">Stop waiting for deployments, start delivering value</p>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <!-- Left side: Benefits -->
-            <div class="space-y-6">
-                <div class="feature-border pl-6 py-4 rounded-r-lg scroll-reveal">
-                    <h3 class="text-xl font-bold text-gray-900">Automated Deployment Pipeline</h3>
-                    <p class="mt-2 text-gray-600">Reduce deployment time from hours to minutes with our automated CI/CD pipelines. No more manual interventions or deployment queues.</p>
-                    <div class="mt-3 text-blue-600">
-                        <span class="font-semibold flex items-center">
-                            <i class="fas fa-clock mr-2"></i>
-                            Average time saved: 4-6 hours/week per developer
-                        </span>
-                    </div>
-                </div>
-
-                <div class="feature-border pl-6 py-4 rounded-r-lg scroll-reveal">
-                    <h3 class="text-xl font-bold text-gray-900">Self-Service Developer Portal</h3>
-                    <p class="mt-2 text-gray-600">Empower developers to manage their deployments without waiting for DevOps team intervention. Full visibility and control over the process.</p>
-                    <div class="mt-3 text-blue-600">
-                        <span class="font-semibold flex items-center">
-                            <i class="fas fa-tachometer-alt mr-2"></i>
-                            Response time reduced by 85%
-                        </span>
-                    </div>
-                </div>
-
-                <div class="feature-border pl-6 py-4 rounded-r-lg scroll-reveal">
-                    <h3 class="text-xl font-bold text-gray-900">Zero-Touch Deployments</h3>
-                    <p class="mt-2 text-gray-600">Automated testing, security scans, and deployment validation. No more fixing deployment issues or rollback headaches.</p>
-                    <div class="mt-3 text-blue-600">
-                        <span class="font-semibold flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i>
-                            99.9% deployment success rate
-                        </span>
-                    </div>
-                </div>
+    <!-- Developer Productivity Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Maximize Developer Productivity</h2>
+                <p class="mt-4 text-lg text-gray-500">Stop waiting for deployments, start delivering value</p>
             </div>
 
-            <!-- Right side: Key Metrics -->
-            <div class="bg-gray-50 p-8 rounded-lg shadow-sm scroll-reveal">
-                <h3 class="text-xl font-bold text-gray-900 mb-6">Impact on Development Teams</h3>
-                
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Left side: Benefits -->
                 <div class="space-y-6">
-                    <div class="metric-comparison flex items-center justify-between p-3 rounded-lg hover:bg-white">
-                        <span class="text-gray-600">Deployment Time</span>
-                        <div class="flex items-center space-x-4">
-                            <span class="text-red-500 line-through">45 minutes</span>
-                            <span class="text-green-500 font-bold stat-value">3 minutes</span>
+                    <div class="border-l-4 border-blue-600 pl-4">
+                        <h3 class="text-xl font-bold text-gray-900">Automated Deployment Pipeline</h3>
+                        <p class="mt-2 text-gray-600">Reduce deployment time from hours to minutes with our automated CI/CD pipelines. No more manual interventions or deployment queues.</p>
+                        <div class="mt-3 text-blue-600">
+                            <span class="font-semibold">Average time saved: 4-6 hours/week per developer</span>
                         </div>
                     </div>
 
-                    <div class="metric-comparison flex items-center justify-between p-3 rounded-lg hover:bg-white">
-                        <span class="text-gray-600">Deployment Success Rate</span>
-                        <div class="flex items-center space-x-4">
-                            <span class="text-red-500 line-through">75%</span>
-                            <span class="text-green-500 font-bold stat-value">99.9%</span>
+                    <div class="border-l-4 border-blue-600 pl-4">
+                        <h3 class="text-xl font-bold text-gray-900">Self-Service Developer Portal</h3>
+                        <p class="mt-2 text-gray-600">Empower developers to manage their deployments without waiting for DevOps team intervention. Full visibility and control over the process.</p>
+                        <div class="mt-3 text-blue-600">
+                            <span class="font-semibold">Response time reduced by 85%</span>
                         </div>
                     </div>
 
-                    <div class="metric-comparison flex items-center justify-between p-3 rounded-lg hover:bg-white">
-                        <span class="text-gray-600">Weekly Time Saved</span>
-                        <span class="text-green-500 font-bold stat-value">4-6 hours/developer</span>
-                    </div>
-
-                    <div class="metric-comparison flex items-center justify-between p-3 rounded-lg hover:bg-white">
-                        <span class="text-gray-600">Manual Interventions</span>
-                        <div class="flex items-center space-x-4">
-                            <span class="text-red-500 line-through">8-10/week</span>
-                            <span class="text-green-500 font-bold stat-value">0-1/week</span>
+                    <div class="border-l-4 border-blue-600 pl-4">
+                        <h3 class="text-xl font-bold text-gray-900">Zero-Touch Deployments</h3>
+                        <p class="mt-2 text-gray-600">Automated testing, security scans, and deployment validation. No more fixing deployment issues or rollback headaches.</p>
+                        <div class="mt-3 text-blue-600">
+                            <span class="font-semibold">99.9% deployment success rate</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Additional Features -->
-                <div class="mt-8">
-                    <h4 class="font-semibold text-gray-900 mb-4">Automated Features</h4>
-                    <ul class="space-y-3">
-                        <li class="automated-feature flex items-center text-gray-600 p-2 rounded-lg hover:bg-white">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Auto-scaling infrastructure
-                        </li>
-                        <li class="automated-feature flex items-center text-gray-600 p-2 rounded-lg hover:bg-white">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Automated security scanning
-                        </li>
-                        <li class="automated-feature flex items-center text-gray-600 p-2 rounded-lg hover:bg-white">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            One-click rollbacks
-                        </li>
-                        <li class="automated-feature flex items-center text-gray-600 p-2 rounded-lg hover:bg-white">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Environment provisioning
-                        </li>
-                    </ul>
+                <!-- Right side: Key Metrics -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Impact on Development Teams</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Deployment Time</span>
+                            <div class="flex items-center">
+                                <span class="text-red-500 line-through mr-2">45 minutes</span>
+                                <span class="text-green-500 font-bold">3 minutes</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Deployment Success Rate</span>
+                            <div class="flex items-center">
+                                <span class="text-red-500 line-through mr-2">75%</span>
+                                <span class="text-green-500 font-bold">99.9%</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Weekly Time Saved</span>
+                            <span class="text-green-500 font-bold">4-6 hours/developer</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Manual Interventions</span>
+                            <div class="flex items-center">
+                                <span class="text-red-500 line-through mr-2">8-10/week</span>
+                                <span class="text-green-500 font-bold">0-1/week</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Features -->
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-900 mb-4">Automated Features</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Auto-scaling infrastructure
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Automated security scanning
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                One-click rollbacks
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Environment provisioning
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
- 
 
- <!-- Automation  plans -->
     <div class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12 scroll-reveal">
+            <div class="text-center mb-12">
                 <h2 class="text-3xl font-extrabold text-gray-900">Choose Your Automation Plan</h2>
                 <p class="mt-4 text-lg text-gray-500">Free your developers, accelerate deployments, reduce costs</p>
             </div>
     
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Startup Plan -->
-                <div class="bg-white rounded-lg shadow-sm p-8 border-t-4 border-blue-400 scroll-reveal">
+                <div class="bg-white rounded-lg shadow-sm p-8 border-t-4 border-blue-400">
                     <div class="text-center">
                         <h3 class="text-2xl font-bold text-gray-900">Startup</h3>
                         <div class="mt-4">
@@ -841,7 +601,7 @@ html {
                 </div>
     
                 <!-- Growth Plan -->
-                <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600 transform scale-105 scroll-reveal">
+                <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600 transform scale-105">
                     <div class="text-center">
                         <h3 class="text-2xl font-bold text-gray-900">Growth</h3>
                         <div class="mt-4">
@@ -895,8 +655,8 @@ html {
                     </div>
                 </div>
     
-<!-- Enterprise Plan -->
-                <div class="bg-white rounded-lg shadow-sm p-8 border-t-4 border-blue-800 scroll-reveal">
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-lg shadow-sm p-8 border-t-4 border-blue-800">
                     <div class="text-center">
                         <h3 class="text-2xl font-bold text-gray-900">Enterprise</h3>
                         <div class="mt-4">
@@ -950,181 +710,71 @@ html {
                     </ul>
     
                     <div class="mt-6 text-sm text-gray-500">
-                        Perfect for: Large teams requiring complete automation and dedicated support 
+                        Perfect for: Large teams requiring complete automation and dedicated support
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Case Studies Section -->
+<!-- Replace your existing case studies section with this -->
 <div id="case-studies" class="py-16 bg-gray-50 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12 scroll-reveal">
+        <div class="text-center mb-12">
             <h2 class="text-3xl font-extrabold text-gray-900">Success Stories</h2>
-            <p class="mt-4 text-lg text-gray-500">Real transformation journeys</p>
-        </div>
-
-        <div class="carousel-container fade-edges">
-            <div class="carousel-track">
-                <!-- First Set -->
-                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">E-commerce Giant</div>
-                    <div class="metric-value text-4xl font-bold mb-2">$28.5K</div>
-                    <p class="text-gray-600">Monthly Cloud Savings</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>45min → 3min deployment</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>95% automation achieved</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">Healthcare Provider</div>
-                    <div class="metric-value text-4xl font-bold mb-2">$32.7K</div>
-                    <p class="text-gray-600">Monthly Cost Reduction</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Zero-touch deployment</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>99.99% uptime achieved</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">FinTech Platform</div>
-                    <div class="metric-value text-4xl font-bold mb-2">$25K</div>
-                    <p class="text-gray-600">Monthly Optimization</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Full CI/CD automation</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>15hrs/week saved</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Duplicate Set for Continuous Scroll -->
-                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">SaaS Provider</div>
-                    <div class="metric-value text-4xl font-bold mb-2">$22K</div>
-                    <p class="text-gray-600">Monthly Cost Optimization</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>8hrs/week dev time saved</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>90% deployment automation</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4 text-lg font-semibold">Retail Chain</div>
-                    <div class="metric-value text-4xl font-bold mb-2">$18K</div>
-                    <p class="text-gray-600">Monthly Cloud Savings</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Peak season ready</span>
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>300% performance gain</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Client Testimonials -->
-<div class="py-16 bg-white overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12 scroll-reveal">
-            <h2 class="text-3xl font-extrabold text-gray-900">What Our Clients Say</h2>
-            <p class="mt-4 text-lg text-gray-500">Real feedback from real clients</p>
+            <p class="mt-4 text-lg text-gray-500">Real-world transformation journeys</p>
         </div>
         
-        <div class="carousel-container fade-edges">
-            <div class="carousel-track">
-                <!-- First Set of Testimonials -->
-                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6">"Their automation expertise transformed our deployment process. We've cut our cloud costs significantly while improving performance."</p>
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                            MT
+        <!-- Success Stories Carousel -->
+        <div class="relative">
+            <div class="success-stories-container overflow-hidden">
+                <div class="success-stories-track flex animate-scroll">
+                    <!-- First Set -->
+                    <div class="min-w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- E-commerce Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">E-commerce Giant</div>
+                            <p class="text-gray-600 mb-4">Reduced deployment time from 45min to 3min</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$28.5K</div>
+                            <p class="text-sm text-gray-500">Monthly Cloud Savings</p>
                         </div>
-                        <div class="ml-4">
-                            <p class="font-semibold text-gray-900">Mike Thompson</p>
-                            <p class="text-sm text-gray-500">CTO, TechCorp</p>
+                        <!-- Healthcare Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">Healthcare Provider</div>
+                            <p class="text-gray-600 mb-4">99.99% Deployment Success Rate</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$32.7K</div>
+                            <p class="text-sm text-gray-500">Monthly Cost Reduction</p>
                         </div>
-                    </div>
-                </div>
-
-                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6">"The migration from our legacy systems was smooth and professional. Their attention to security and compliance was impressive."</p>
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                            SR
-                        </div>
-                        <div class="ml-4">
-                            <p class="font-semibold text-gray-900">Sarah Rodriguez</p>
-                            <p class="text-sm text-gray-500">Head of IT, HealthCare Plus</p>
+                        <!-- FinTech Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">FinTech Platform</div>
+                            <p class="text-gray-600 mb-4">Zero-touch deployment achieved</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$25K</div>
+                            <p class="text-sm text-gray-500">Monthly Infrastructure Savings</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6">"Our developers can now focus on coding instead of dealing with deployment issues. The automation is seamless."</p>
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                            AK  
+                    <!-- Second Set -->
+                    <div class="min-w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- SaaS Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">SaaS Company</div>
+                            <p class="text-gray-600 mb-4">15hrs/week developer time saved</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$22K</div>
+                            <p class="text-sm text-gray-500">Monthly Cost Optimization</p>
                         </div>
-                        <div class="ml-4">
-                            <p class="font-semibold text-gray-900">Alex Kumar</p>
-                            <p class="text-sm text-gray-500">DevOps Lead, FinTech Now</p>
+                        <!-- Retail Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">Retail Chain</div>
+                            <p class="text-gray-600 mb-4">95% Automation Achievement</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$18K</div>
+                            <p class="text-sm text-gray-500">Monthly Cloud Savings</p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Duplicate Set for Continuous Scroll -->
-                <div class="carousel-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <p class="text-gray-600 mb-6">"The cost savings exceeded our expectations. Their team's expertise in cloud optimization is outstanding."</p>
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                            DP
-                        </div>
-                        <div class="ml-4">
-                            <p class="font-semibold text-gray-900">David Patel</p>
-                            <p class="text-sm text-gray-500">CIO, Retail Chain</p>
+                        <!-- EdTech Case -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
+                            <div class="text-blue-600 mb-4 text-lg font-semibold">EdTech Startup</div>
+                            <p class="text-gray-600 mb-4">2min average deployment time</p>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">$15K</div>
+                            <p class="text-sm text-gray-500">Monthly Cost Reduction</p>
                         </div>
                     </div>
                 </div>
@@ -1132,11 +782,89 @@ html {
         </div>
     </div>
 </div>
+
+<style>
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    50.01% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 20s linear infinite;
+}
+
+.success-stories-track:hover {
+    animation-play-state: paused;
+}
+
+.success-stories-container {
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+}
+</style>
+    <!-- Client Testimonials -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">What Our Clients Say</h2>
+                <p class="mt-4 text-lg text-gray-500">Real feedback from real clients</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The team's expertise in containerization and cost optimization has transformed our infrastructure. We're seeing better performance at lower costs."</p>
+                    <div class="mt-4">
+                        <p class="font-semibold text-gray-900">Sarah Chen</p>
+                        <p class="text-sm text-gray-500">CTO, TechStart Solutions</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The migration from our legacy systems was smooth and professional. Their attention to security and compliance was impressive."</p>
+                    <div class="mt-4">
+                        <p class="font-semibold text-gray-900">Michael Rodriguez</p>
+                        <p class="text-sm text-gray-500">Head of IT, HealthCare Plus</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Their DevOps automation solutions have significantly reduced our deployment time and improved our overall efficiency."</p>
+                    <div class="mt-4">
+                        <p class="font-semibold text-gray-900">Alex Thompson</p>
+                        <p class="text-sm text-gray-500">DevOps Manager, FinTech Now</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Technology Stack -->
     <div class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12 scroll-reveal">
+            <div class="text-center mb-12">
                 <h2 class="text-3xl font-extrabold text-gray-900">Our Technology Stack</h2>
                 <p class="mt-4 text-lg text-gray-500">Modern tools for modern solutions</p>
             </div>
@@ -1167,7 +895,7 @@ html {
                     <i class="fas fa-dharmachakra text-5xl text-gray-700"></i>
                     <p class="mt-2 text-gray-600">Kubernetes</p>
                 </div>
-          <div class="tech-icon p-4">
+                <div class="tech-icon p-4">
                     <i class="fas fa-box text-5xl text-gray-700"></i>
                     <p class="mt-2 text-gray-600">Containerd</p>
                 </div>
@@ -1218,49 +946,93 @@ html {
     <!-- Team Section -->
     <div id="team" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12 scroll-reveal">
+            <div class="text-center mb-12">
                 <h2 class="text-3xl font-extrabold text-gray-900">Our Expert Team</h2>
                 <p class="mt-4 text-lg text-gray-500">Industry veterans with proven expertise</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Hritik's Profile -->
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card scroll-reveal">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card">
                     <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                         <span class="text-2xl font-bold text-white">HC</span>
                     </div>
                     <h3 class="mt-6 text-xl font-bold text-gray-900">Hritik Chaudhary</h3>
                     <p class="mt-2 text-gray-500">Cloud Solutions Architect</p>
                     <p class="mt-3 text-sm text-gray-600">AWS & Azure Certified Expert</p>
+<!--                     <div class="mt-4 flex justify-center space-x-3">
+                        <a href="mailto:hritikchaudhary016@gmail.com" class="text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-envelope text-lg"></i>
+                        </a>
+                        <a href="tel:+918859820935" class="text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-phone text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/918859820935" class="text-green-600 hover:text-green-800">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div> -->
                 </div>
 
                 <!-- Keshav's Profile -->
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card scroll-reveal">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card">
                     <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                         <span class="text-2xl font-bold text-white">KS</span>
                     </div>
                     <h3 class="mt-6 text-xl font-bold text-gray-900">Keshav Saini</h3>
                     <p class="mt-2 text-gray-500">DevOps Engineer</p>
                     <p class="mt-3 text-sm text-gray-600">CI/CD & Automation Specialist</p>
+<!--                     <div class="mt-4 flex justify-center space-x-3">
+                        <a href="#" class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-linkedin text-lg"></i>
+                        </a>
+                        <a href="tel:+917017323865" class="text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-phone text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/917017323865" class="text-green-600 hover:text-green-800">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div> -->
                 </div>
 
                 <!-- Sumit's Profile -->
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card scroll-reveal">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card">
                     <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                         <span class="text-2xl font-bold text-white">SK</span>
                     </div>
                     <h3 class="mt-6 text-xl font-bold text-gray-900">Sumit Kumar</h3>
                     <p class="mt-2 text-gray-500">Infrastructure Specialist</p>
                     <p class="mt-3 text-sm text-gray-600">Cloud Optimization Expert</p>
+<!--                     <div class="mt-4 flex justify-center space-x-3">
+                        <a href="#" class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-linkedin text-lg"></i>
+                        </a>
+                        <a href="tel:+918859820935" class="text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-phone text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/918859820935" class="text-green-600 hover:text-green-800">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div> -->
                 </div>
 
                 <!-- Giri's Profile -->
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card scroll-reveal">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card">
                     <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                         <span class="text-2xl font-bold text-white">GO</span>
                     </div>
                     <h3 class="mt-6 text-xl font-bold text-gray-900">Giri Orsu</h3>
                     <p class="mt-2 text-gray-500">Cloud Security Architect</p>
                     <p class="mt-3 text-sm text-gray-600">Security & Compliance Expert</p>
+<!--                     <div class="mt-4 flex justify-center space-x-3">
+                        <a href="#" class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-linkedin text-lg"></i>
+                        </a>
+                        <a href="tel:+917017323865" class="text-blue-600 hover:text-blue-800">
+                            <i class="fas fa-phone text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/917017323865" class="text-green-600 hover:text-green-800">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -1268,14 +1040,14 @@ html {
 <!-- Contact Section -->
     <div id="contact" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12 scroll-reveal">
+            <div class="text-center mb-12">
                 <h2 class="text-3xl font-extrabold text-gray-900">Start Your Transformation</h2>
                 <p class="mt-4 text-lg text-gray-500">Get your free infrastructure assessment today</p>
             </div>
             
             <!-- Contact Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="contact-card bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
                     <div class="text-blue-600 mb-4">
                         <i class="fas fa-phone-alt text-4xl"></i>
                     </div>
@@ -1286,7 +1058,7 @@ html {
                     </a>
                 </div>
 
-                <div class="contact-card bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
                     <div class="text-blue-600 mb-4">
                         <i class="fab fa-whatsapp text-4xl"></i>
                     </div>
@@ -1297,7 +1069,7 @@ html {
                     </a>
                 </div>
 
-                <div class="contact-card bg-white p-6 rounded-lg shadow-sm text-center">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
                     <div class="text-blue-600 mb-4">
                         <i class="fas fa-envelope text-4xl"></i>
                     </div>
@@ -1312,13 +1084,13 @@ html {
 <!-- Contact Form Section with Styling -->
 <div id="contact" class="py-16 bg-gradient-to-b from-gray-50 to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center scroll-reveal">
+        <div class="text-center">
             <h2 class="text-3xl font-extrabold text-gray-900">Get Your Free Cloud Cost Analysis</h2>
             <p class="mt-4 text-lg text-gray-600">Discover how much you could save with our cloud optimization expertise</p>
         </div>
 
         <!-- Value Proposition Cards -->
-        <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3 mb-12 scroll-reveal">
+        <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3 mb-12">
             <div class="bg-white rounded-lg shadow-sm p-6 border-t-4 border-blue-500">
                 <div class="text-blue-600 mb-4">
                     <i class="fas fa-chart-line text-3xl"></i>
@@ -1367,7 +1139,7 @@ html {
         </div>
 
         <!-- Trust Indicators -->
-        <div class="mt-12 text-center scroll-reveal">
+        <div class="mt-12 text-center">
             <div class="flex flex-wrap justify-center items-center gap-6 text-gray-500">
                 <div class="flex items-center">
                     <i class="fas fa-shield-alt mr-2"></i>
@@ -1400,7 +1172,7 @@ html {
                         <a href="https://wa.me/918859820935" class="text-gray-400 hover:text-white">
                             <i class="fab fa-whatsapp text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
+                        <a href="https://www.linkedin.com/company/automatedevops/" class="text-gray-400 hover:text-white">
                             <i class="fab fa-linkedin text-xl"></i>
                         </a>
                     </div>
@@ -1417,7 +1189,7 @@ html {
                     </ul>
                 </div>
 
-<!-- Contact Info -->
+                <!-- Contact Info -->
                 <div>
                     <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
                     <ul class="space-y-2">
@@ -1451,18 +1223,6 @@ html {
             <i class="fab fa-whatsapp text-2xl"></i>
         </a>
     </div>
-
-    <!-- Scroll Reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-        ScrollReveal().reveal('.scroll-reveal', { 
-            distance: '60px',
-            duration: 1500,
-            easing: 'cubic-bezier(.23,1,.32,1)',
-            interval: 100,
-            scale: 0.8
-        });
-    </script>
 
 </body>
 </html>
