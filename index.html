@@ -825,7 +825,7 @@
                 <div class="enhanced-glass rounded-xl p-8">
 <!-- Replace the existing iframe section with this form -->
 <div class="enhanced-glass rounded-xl p-8">
-    <form action="https://formcarry.com/s/UeiTSoVZTFt" method="POST" class="space-y-6">
+    <form id="contactForm" class="space-y-6">
         <div>
             <label class="block text-gray-300 mb-2">Name</label>
             <input type="text" name="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
@@ -860,6 +860,11 @@
         <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">
             Send Message
         </button>
+
+        <!-- Success Message (hidden by default) -->
+        <div id="successMessage" class="hidden text-green-400 text-center py-2">
+            Message sent successfully!
+        </div>
     </form>
 </div>
                 </div>
@@ -989,5 +994,48 @@
             });
         });
     </script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const submitButton = this.querySelector('button[type="submit"]');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Disable submit button during submission
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Sending...';
+        
+            fetch('https://formcarry.com/s/UeiTSoVZTFt', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Reset form
+                this.reset();
+                
+                // Show success message
+                successMessage.classList.remove('hidden');
+                
+                // Hide success message after 3 seconds
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 3000);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your message. Please try again.');
+            })
+            .finally(() => {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Send Message';
+            });
+        });
+        </script>
 </body>
 </html>
