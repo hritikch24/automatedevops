@@ -3,1226 +3,809 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutomateDevops | Modern DevOps Solutions</title>
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FWNCCQVMG"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-7FWNCCQVMG');
-    </script>
-
-    <meta name="description" content="Premier DevOps automation experts delivering cloud cost optimization, legacy modernization, and containerization solutions. Achieve up to 60% cost savings with our proven methodologies.">
-    <meta name="keywords" content="Cloud Cost Optimization, AWS Cost Reduction, Azure Savings, DevOps Automation, Infrastructure as Code, CI/CD Pipeline, Cloud Migration, Kubernetes Management, Legacy Modernization, Container Migration">
-    <title>AutomateDevops | Cloud Optimization & Modern DevOps Solutions</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     
+    <!-- CSS Dependencies -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <meta property="og:title" content="AutomateDevops | Cloud Optimization & Modern DevOps Solutions">
-    <meta property="og:description" content="Premier DevOps automation experts delivering cloud cost optimization, legacy modernization, and containerization solutions. Achieve up to 60% cost savings with our proven methodologies.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://automatedevops.tech">
-    <meta property="og:site_name" content="AutomateDevops">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Metadata -->
+    <meta name="description" content="Premier DevOps automation experts delivering cloud cost optimization, legacy modernization, and containerization solutions. Developer rates from $40-60/hr.">
+    <meta name="keywords" content="DevOps Automation, Cloud Optimization, Freelance DevOps, AWS, Azure, GCP, CI/CD, Infrastructure as Code">
     
-    <!-- Twitter Card tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AutomateDevops | Cloud Optimization Experts">
-    <meta name="twitter:description" content="Premier DevOps automation experts delivering cloud cost optimization and modern solutions with proven cost savings.">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://automatedevops.tech">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "AutomateDevops",
-      "url": "https://automatedevops.tech",
-      "description": "Premier DevOps automation experts delivering cloud cost optimization, legacy modernization, and containerization solutions. Achieve up to 60% cost savings with our proven methodologies.",
-      "priceRange": "$$",
-      "serviceType": [
-        "DevOps Automation",
-        "Cloud Cost Optimization",
-        "Infrastructure Modernization",
-        "Legacy System Migration",
-        "Container Deployment"
-      ],
-      "areaServed": {
-        "@type": "Country",
-        "name": "Global"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "USD",
-        "lowPrice": "999",
-        "highPrice": "9999",
-        "offerCount": "3"
-      },
-      "sameAs": [
-        "https://github.com/automatedevops",
-        "https://linkedin.com/company/automatedevops"
-      ]
-    }
-    </script>
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+        /* Core animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
         }
-        .feature-card {
-            transition: transform 0.3s ease;
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
-        .feature-card:hover {
-            transform: translateY(-5px);
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .savings-card {
-            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+
+        /* Custom utility classes */
+        .floating {
+            animation: float 6s ease-in-out infinite;
         }
-        .tech-icon {
+
+        .pulsing {
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* Modern gradients and effects */
+        .gradient-text {
+            background: linear-gradient(45deg, #3B82F6, #2563EB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at center, #1E40AF 0%, #1E3A8A 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
         }
-        .tech-icon:hover {
-            transform: scale(1.1);
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
         }
-        .testimonial-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f3f4f6 100%);
-        }
-        .service-card {
-            border-left: 4px solid #3B82F6;
-        }
-        .stats-grid {
-            background: linear-gradient(135deg, #1E40AF 0%, #2563EB 100%);
-        }
-        .timeline-item {
-            border-left: 2px solid #3B82F6;
-            padding-left: 20px;
-            margin-left: 10px;
+
+        /* Animated background */
+        .animated-bg {
             position: relative;
+            overflow: hidden;
         }
-        .timeline-item::before {
+
+        .animated-bg::before {
             content: '';
-            width: 12px;
-            height: 12px;
-            background: #3B82F6;
-            border-radius: 50%;
             position: absolute;
-            left: -7px;
-            top: 0;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1F2937;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3B82F6;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563EB;
+        }
+
+        /* Timeline animation */
+        .timeline-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Enhanced glass effect */
+        .enhanced-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        /* Pricing card effects */
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Freelancer section specific styles */
+        .skill-tag {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            color: #60A5FA;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        /* Loading animation */
+        .loading {
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+        }
+
+        .loaded {
+            opacity: 1;
         }
     </style>
-    <!-- Add preconnect for external resources -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    
-    <!-- Add preload for critical resources -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js">
-
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-900 text-white loading">
+
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-10">
+    <nav class="fixed w-full z-50 bg-opacity-90 bg-gray-900 backdrop-filter backdrop-blur-lg">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold text-blue-600">Automate<span class="text-gray-700">Devops</span></span>
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold gradient-text">Automate<span class="text-blue-400">Devops</span></span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#solutions" class="text-gray-600 hover:text-blue-600">Solutions</a>
-                    <a href="#cost-savings" class="text-gray-600 hover:text-blue-600">Cost Savings</a>
-                    <a href="#modernization" class="text-gray-600 hover:text-blue-600">Modernization</a>
-                    <a href="#case-studies" class="text-gray-600 hover:text-blue-600">Case Studies</a>
-                    <a href="#team" class="text-gray-600 hover:text-blue-600">Team</a>
-                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Get Started</a>
+                    <a href="#solutions" class="text-gray-300 hover:text-blue-400 transition">Solutions</a>
+                    <a href="#freelancers" class="text-gray-300 hover:text-blue-400 transition">Hire DevOps</a>
+                    <a href="#pricing" class="text-gray-300 hover:text-blue-400 transition">Pricing</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+                        Get Started
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="gradient-bg pt-32 pb-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="hero-gradient min-h-screen flex items-center relative overflow-hidden animated-bg">
+        <div class="max-w-7xl mx-auto px-4 py-32 relative z-10">
             <div class="text-center">
-                <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                    Transform Your Infrastructure,<br/>Reduce Costs by Up to 60%
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 fade-in-up">
+                    Transform Your <span class="gradient-text">Infrastructure</span>
                 </h1>
-                <p class="mt-3 max-w-md mx-auto text-base text-gray-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                    Specialized in legacy modernization, cloud optimization, and containerized solutions that deliver measurable cost savings and performance improvements.
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 fade-in-up">
+                    Expert DevOps solutions and freelancers from $40-60/hour
                 </p>
-                <div class="mt-8 flex justify-center space-x-4">
-                    <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition duration-300">
-                        Schedule Free Assessment
+                <div class="flex flex-col md:flex-row justify-center gap-6 fade-in-up">
+                    <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-full text-lg hover:bg-blue-700 transition">
+                        Start Your Project
                     </a>
-                    <a href="#case-studies" class="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-blue-500 transition duration-300">
-                        View Success Stories
+                    <a href="#freelancers" class="glass-card px-8 py-4 rounded-full text-lg hover:bg-opacity-20 transition">
+                        Hire DevOps Experts
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Quick Stats Banner -->
-    <div class="stats-grid -mt-10 py-8 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div class="text-center text-white p-4">
-                <div class="text-4xl font-bold">60%</div>
-                <div class="text-sm mt-1">Average Cost Reduction</div>
-            </div>
-            <div class="text-center text-white p-4">
-                <div class="text-4xl font-bold">100+</div>
-                <div class="text-sm mt-1">Projects Delivered</div>
-            </div>
-            <div class="text-center text-white p-4">
-                <div class="text-4xl font-bold">15+</div>
-                <div class="text-sm mt-1">Years Experience</div>
-            </div>
-            <div class="text-center text-white p-4">
-                <div class="text-4xl font-bold">24/7</div>
-                <div class="text-sm mt-1">Support Available</div>
+    <!-- Quick Stats -->
+    <div class="py-20 bg-gray-800 relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="glass-card rounded-xl p-8 text-center">
+                    <div class="text-4xl font-bold text-blue-400 mb-2 stat-value" data-value="60">0</div>
+                    <div class="text-gray-300">Cost Reduction</div>
+                </div>
+                <div class="glass-card rounded-xl p-8 text-center">
+                    <div class="text-4xl font-bold text-blue-400 mb-2 stat-value" data-value="100">0</div>
+                    <div class="text-gray-300">Projects Delivered</div>
+                </div>
+                <div class="glass-card rounded-xl p-8 text-center">
+                    <div class="text-4xl font-bold text-blue-400 mb-2 stat-value" data-value="15">0</div>
+                    <div class="text-gray-300">Years Experience</div>
+                </div>
+                <div class="glass-card rounded-xl p-8 text-center">
+                    <div class="text-4xl font-bold text-blue-400 mb-2">24/7</div>
+                    <div class="text-gray-300">Expert Support</div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Core Solutions -->
-    <div id="solutions" class="py-16 bg-white">
+    <!-- Freelancer Section -->
+    <div id="freelancers" class="py-20 bg-gray-900 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Comprehensive DevOps Solutions</h2>
-                <p class="mt-4 text-lg text-gray-500">End-to-end services for modern infrastructure needs</p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Hire Expert <span class="gradient-text">DevOps Engineers</span></h2>
+                <p class="text-gray-400 text-xl">Experienced freelancers ready to transform your infrastructure</p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="service-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
+                <!-- Senior DevOps Engineer -->
+                <div class="enhanced-glass rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user-cog text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Senior DevOps Engineer</h3>
+                            <p class="text-blue-400">$60/hour</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span class="text-gray-300">10+ years experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span class="text-gray-300">Enterprise architecture expertise</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span class="text-gray-300">Complex system design</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- Mid-Level DevOps Engineer -->
+                <div class="enhanced-glass rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-code-branch text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Mid-Level DevOps</h3>
+                            <p class="text-blue-400">$50/hour</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span class="text-gray-300">5+ years experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span class="text-gray-300">Pipeline optimization</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span class="text-gray-300">Cloud infrastructure</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Ansible</span>
+                    </div>
+                </div>
+
+                <!-- Junior DevOps Engineer -->
+                <div class="enhanced-glass rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-laptop-code text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Junior DevOps</h3>
+                            <p class="text-blue-400">$40/hour</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4
+<div class="space-y-4 mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span class="text-gray-300">2+ years experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span class="text-gray-300">Basic automation</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span class="text-gray-300">Monitoring setup</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Shell</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Freelancer CTA -->
+            <div class="mt-12 text-center">
+                <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg hover:bg-blue-700 transition">
+                    Hire DevOps Engineers
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solutions Section -->
+    <div id="solutions" class="py-20 bg-gray-800 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our <span class="gradient-text">Solutions</span></h2>
+                <p class="text-gray-400 text-xl">Comprehensive DevOps automation for modern enterprises</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Cloud Optimization -->
+                <div class="enhanced-glass rounded-xl p-8">
+                    <div class="text-blue-400 mb-6">
                         <i class="fas fa-cloud text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900">Cloud Cost Optimization</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
+                    <h3 class="text-2xl font-bold mb-4">Cloud Optimization</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
                             Resource right-sizing
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Automated scaling solutions
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Cost monitoring
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Cost monitoring & alerts
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Performance tuning
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Reserved instance optimization
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Auto-scaling setup
                         </li>
                     </ul>
                 </div>
 
-                <div class="service-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
+                <!-- Infrastructure Modernization -->
+                <div class="enhanced-glass rounded-xl p-8">
+                    <div class="text-blue-400 mb-6">
                         <i class="fas fa-server text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900">Legacy Modernization</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Application assessment
+                    <h3 class="text-2xl font-bold mb-4">Modernization</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Container migration
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Containerization strategy
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Microservices
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Microservices architecture
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Zero-downtime
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Zero-downtime migration
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Legacy migration
                         </li>
                     </ul>
                 </div>
 
-                <div class="service-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
+                <!-- DevOps Automation -->
+                <div class="enhanced-glass rounded-xl p-8">
+                    <div class="text-blue-400 mb-6">
                         <i class="fas fa-cogs text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900">DevOps Automation</h3>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            CI/CD pipeline setup
+                    <h3 class="text-2xl font-bold mb-4">Automation</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            CI/CD pipelines
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
                             Infrastructure as Code
                         </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            Monitoring & logging
-                        </li>
-                        <li class="flex items-center text-gray-600">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
                             Security automation
                         </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Monitoring setup
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Solutions for Different Scales Section -->
-<div class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold text-gray-900">Solutions for Every Scale</h2>
-            <p class="mt-4 text-lg text-gray-500">From ambitious startups to large enterprises, we deliver value at any scale</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <!-- For Startups -->
-            <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-sm border border-blue-100">
-                <div class="flex items-center mb-6">
-                    <div class="bg-blue-600 p-3 rounded-lg">
-                        <i class="fas fa-rocket text-2xl text-white"></i>
-                    </div>
-                    <h3 class="ml-4 text-2xl font-bold text-gray-900">For Startups</h3>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Budget-Friendly Automation</h4>
-                            <p class="text-gray-600">Start with essential automation that grows with you. Pay only for what you need.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Quick Setup</h4>
-                            <p class="text-gray-600">Get your deployment pipeline running in days, not weeks.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Smart Cost Control</h4>
-                            <p class="text-gray-600">Optimized infrastructure that scales with your growth without wastage.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-blue-50 p-4 rounded-lg mt-6">
-                        <p class="text-sm text-blue-800">Starting from $999/month for complete DevOps automation</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- For Enterprises -->
-            <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <div class="flex items-center mb-6">
-                    <div class="bg-gray-800 p-3 rounded-lg">
-                        <i class="fas fa-building text-2xl text-white"></i>
-                    </div>
-                    <h3 class="ml-4 text-2xl font-bold text-gray-900">For Enterprises</h3>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Enterprise-Grade Solutions</h4>
-                            <p class="text-gray-600">Comprehensive automation with advanced security and compliance features.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">Legacy Modernization</h4>
-                            <p class="text-gray-600">Seamless migration from legacy systems to modern cloud architecture.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                        <div>
-                            <h4 class="font-semibold text-gray-900">24/7 Expert Support</h4>
-                            <p class="text-gray-600">Dedicated team for monitoring and maintaining your infrastructure.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-50 p-4 rounded-lg mt-6">
-                        <p class="text-sm text-gray-800">Custom solutions with significant cost savings at scale</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Success Stories Preview -->
-        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <p class="text-sm text-blue-600 font-semibold">Startup Success</p>
-                <h4 class="mt-2 font-bold text-gray-900">FinTech Startup</h4>
-                <p class="mt-2 text-gray-600">Reduced deployment time from 30 mins to 2 mins. Monthly savings: $3,500</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <p class="text-sm text-blue-600 font-semibold">Mid-Size Business</p>
-                <h4 class="mt-2 font-bold text-gray-900">E-commerce Platform</h4>
-                <p class="mt-2 text-gray-600">Automated 95% of deployments. Monthly savings: $8,500</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <p class="text-sm text-blue-600 font-semibold">Enterprise Scale</p>
-                <h4 class="mt-2 font-bold text-gray-900">Healthcare Provider</h4>
-                <p class="mt-2 text-gray-600">Full infrastructure automation. Monthly savings: $15,750</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-    
-    <!-- Cost Savings Section -->
-    <div id="cost-savings" class="py-16 bg-gray-50">
+    <!-- Case Studies -->
+    <div id="case-studies" class="py-20 bg-gray-900 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900">Real Cost Savings</h2>
-                <p class="mt-4 text-lg text-gray-500">Proven results from recent client engagements</p>
-            </div>
-            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
-                <div class="savings-card p-6 rounded-lg shadow-sm">
-                    <div class="text-4xl font-bold text-blue-600">$28,500</div>
-                    <p class="text-lg font-semibold text-gray-800">Monthly AWS Savings</p>
-                    <p class="mt-2 text-gray-600">Through containerization and resource optimization</p>
-                </div>
-                <div class="savings-card p-6 rounded-lg shadow-sm">
-                    <div class="text-4xl font-bold text-blue-600">$32,750</div>
-                    <p class="text-lg font-semibold text-gray-800">Monthly Azure Savings</p>
-                    <p class="mt-2 text-gray-600">Via infrastructure modernization</p>
-                </div>
-                <div class="savings-card p-6 rounded-lg shadow-sm">
-                    <div class="text-4xl font-bold text-blue-600">$25,000</div>
-                    <p class="text-lg font-semibold text-gray-800">GCP Cost Reduction</p>
-                    <p class="mt-2 text-gray-600">Through workload optimization</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modernization Journey -->
-    <div id="modernization" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Your Modernization Journey</h2>
-                <p class="mt-4 text-lg text-gray-500">From legacy systems to modern containerized solutions</p>
-            </div>
-            <div class="space-y-8">
-                <div class="timeline-item pb-8">
-                    <h3 class="text-xl font-bold text-gray-900">1. Assessment & Planning</h3>
-                    <p class="mt-2 text-gray-600">Comprehensive analysis of current infrastructure, costs, and modernization opportunities</p>
-                </div>
-                <div class="timeline-item pb-8">
-                    <h3 class="text-xl font-bold text-gray-900">2. Architecture Design</h3>
-                    <p class="mt-2 text-gray-600">Creating optimal containerization and microservices strategy</p>
-                </div>
-                <div class="timeline-item pb-8">
-                    <h3 class="text-xl font-bold text-gray-900">3. Modernization & Migration</h3>
-                    <p class="mt-2 text-gray-600">Systematic transformation with zero-downtime deployment</p>
-                </div>
-                <div class="timeline-item">
-                    <h3 class="text-xl font-bold text-gray-900">4. Optimization & Support</h3>
-                    <p class="mt-2 text-gray-600">Continuous monitoring, optimization, and 24/7 support</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Developer Productivity Section -->
-    <div class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Maximize Developer Productivity</h2>
-                <p class="mt-4 text-lg text-gray-500">Stop waiting for deployments, start delivering value</p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Success <span class="gradient-text">Stories</span></h2>
+                <p class="text-gray-400 text-xl">Real results from our clients</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Left side: Benefits -->
-                <div class="space-y-6">
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <h3 class="text-xl font-bold text-gray-900">Automated Deployment Pipeline</h3>
-                        <p class="mt-2 text-gray-600">Reduce deployment time from hours to minutes with our automated CI/CD pipelines. No more manual interventions or deployment queues.</p>
-                        <div class="mt-3 text-blue-600">
-                            <span class="font-semibold">Average time saved: 4-6 hours/week per developer</span>
-                        </div>
-                    </div>
-
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <h3 class="text-xl font-bold text-gray-900">Self-Service Developer Portal</h3>
-                        <p class="mt-2 text-gray-600">Empower developers to manage their deployments without waiting for DevOps team intervention. Full visibility and control over the process.</p>
-                        <div class="mt-3 text-blue-600">
-                            <span class="font-semibold">Response time reduced by 85%</span>
-                        </div>
-                    </div>
-
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <h3 class="text-xl font-bold text-gray-900">Zero-Touch Deployments</h3>
-                        <p class="mt-2 text-gray-600">Automated testing, security scans, and deployment validation. No more fixing deployment issues or rollback headaches.</p>
-                        <div class="mt-3 text-blue-600">
-                            <span class="font-semibold">99.9% deployment success rate</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right side: Key Metrics -->
-                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-gray-900 mb-6">Impact on Development Teams</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-600">Deployment Time</span>
-                            <div class="flex items-center">
-                                <span class="text-red-500 line-through mr-2">45 minutes</span>
-                                <span class="text-green-500 font-bold">3 minutes</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- E-commerce Case Study -->
+                <div class="enhanced-glass rounded-xl p-8">
+                    <div class="text-blue-400 text-lg font-semibold mb-4">E-commerce Platform</div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-chart-line text-blue-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Deployment Speed</h4>
+                                <p class="text-gray-300">Reduced from 45min to 3min</p>
                             </div>
                         </div>
-
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-600">Deployment Success Rate</span>
-                            <div class="flex items-center">
-                                <span class="text-red-500 line-through mr-2">75%</span>
-                                <span class="text-green-500 font-bold">99.9%</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-600">Weekly Time Saved</span>
-                            <span class="text-green-500 font-bold">4-6 hours/developer</span>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-600">Manual Interventions</span>
-                            <div class="flex items-center">
-                                <span class="text-red-500 line-through mr-2">8-10/week</span>
-                                <span class="text-green-500 font-bold">0-1/week</span>
+                        <div class="flex items-start">
+                            <i class="fas fa-dollar-sign text-blue-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Cost Savings</h4>
+                                <p class="text-gray-300">$28.5K monthly reduction</p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Additional Features -->
-                    <div class="mt-8">
-                        <h4 class="font-semibold text-gray-900 mb-4">Automated Features</h4>
-                        <ul class="space-y-2">
-                            <li class="flex items-center text-gray-600">
-                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                Auto-scaling infrastructure
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                Automated security scanning
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                One-click rollbacks
-                            </li>
-                            <li class="flex items-center text-gray-600">
-                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                Environment provisioning
-                            </li>
-                        </ul>
+                <!-- Healthcare Case Study -->
+                <div class="enhanced-glass rounded-xl p-8">
+                    <div class="text-blue-400 text-lg font-semibold mb-4">Healthcare Provider</div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-shield-alt text-blue-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Security</h4>
+                                <p class="text-gray-300">HIPAA compliance automation</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-server text-blue-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Infrastructure</h4>
+                                <p class="text-gray-300">Legacy system modernization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FinTech Case Study -->
+                <div class="enhanced-glass rounded-xl p-8">
+                    <div class="text-blue-400 text-lg font-semibold mb-4">FinTech Startup</div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-rocket text-blue-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Scaling</h4>
+                                <p class="text-gray-300">Auto-scaled to 1M users</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-blue-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-white">Uptime</h4>
+                                <p class="text-gray-300">99.99% availability</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="py-16 bg-gray-50">
+    <!-- Pricing Section -->
+    <div id="pricing" class="py-20 bg-gray-800 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Choose Your Automation Plan</h2>
-                <p class="mt-4 text-lg text-gray-500">Free your developers, accelerate deployments, reduce costs</p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Simple <span class="gradient-text">Pricing</span></h2>
+                <p class="text-gray-400 text-xl">Transparent pricing for every scale</p>
             </div>
-    
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Startup Plan -->
-                <div class="bg-white rounded-lg shadow-sm p-8 border-t-4 border-blue-400">
-                    <div class="text-center">
-                        <h3 class="text-2xl font-bold text-gray-900">Startup</h3>
-                        <div class="mt-4">
-                            <span class="text-4xl font-bold">$999</span>
-                            <span class="text-gray-500">/month</span>
-                        </div>
-                        <p class="mt-2 text-gray-500">Start your automation journey</p>
+                <div class="pricing-card enhanced-glass rounded-xl p-8">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold">Startup</h3>
+                        <div class="text-4xl font-bold mt-4">$999</div>
+                        <div class="text-gray-400">per month</div>
                     </div>
-    
-                    <ul class="mt-8 space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-rocket text-green-500 mt-1 mr-2"></i>
-                            <span>Reduce deployment time from 45min to 5min</span>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Basic CI/CD setup
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-dollar-sign text-green-500 mt-1 mr-2"></i>
-                            <span>Cut cloud costs by 30%</span>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            5 containerized apps
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-clock text-green-500 mt-1 mr-2"></i>
-                            <span>Save 8-10 hours/week of developer time</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Basic CI/CD pipeline automation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-cloud text-green-500 mt-1 mr-2"></i>
-                            <span>Single cloud provider optimization</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-cube text-green-500 mt-1 mr-2"></i>
-                            <span>5 containerized applications</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-chart-line text-green-500 mt-1 mr-2"></i>
-                            <span>Basic monitoring & alerts</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-headset text-green-500 mt-1 mr-2"></i>
-                            <span>8x5 support with same-day response</span>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            8x5 support
                         </li>
                     </ul>
-    
-                    <div class="mt-6 text-sm text-gray-500">
-                        Perfect for: Small teams looking to automate basic deployments and reduce manual work
+                    <div class="text-center">
+                        <a href="#contact" class="inline-block w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+                            Get Started
+                        </a>
                     </div>
                 </div>
-    
+
                 <!-- Growth Plan -->
-                <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600 transform scale-105">
-                    <div class="text-center">
-                        <h3 class="text-2xl font-bold text-gray-900">Growth</h3>
-                        <div class="mt-4">
-                            <span class="text-4xl font-bold">$2,499</span>
-                            <span class="text-gray-500">/month</span>
-                        </div>
-                        <p class="mt-2 text-gray-500">Scale with confidence</p>
+                <div class="pricing-card enhanced-glass rounded-xl p-8 transform scale-105">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold">Growth</h3>
+                        <div class="text-4xl font-bold mt-4">$2,499</div>
+                        <div class="text-gray-400">per month</div>
                     </div>
-    
-                    <ul class="mt-8 space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-rocket text-green-500 mt-1 mr-2"></i>
-                            <span>Reduce deployment time from 45min to 3min</span>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Advanced CI/CD
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-dollar-sign text-green-500 mt-1 mr-2"></i>
-                            <span>Cut cloud costs by 45%</span>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            15 containerized apps
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-clock text-green-500 mt-1 mr-2"></i>
-                            <span>Save 12-15 hours/week of developer time</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Advanced CI/CD with zero-touch deployments</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-cloud text-green-500 mt-1 mr-2"></i>
-                            <span>Multi-cloud optimization & management</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-cube text-green-500 mt-1 mr-2"></i>
-                            <span>15 containerized applications</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-chart-line text-green-500 mt-1 mr-2"></i>
-                            <span>Advanced monitoring with custom dashboards</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-headset text-green-500 mt-1 mr-2"></i>
-                            <span>16x5 support with 4hr response</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-shield-alt text-green-500 mt-1 mr-2"></i>
-                            <span>Security automation & compliance checks</span>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            16x5 support
                         </li>
                     </ul>
-    
-                    <div class="mt-6 text-sm text-gray-500">
-                        Perfect for: Growing teams needing advanced automation and multi-environment management
+                    <div class="text-center">
+                        <a href="#contact" class="inline-block w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+                            Get Started
+                        </a>
                     </div>
                 </div>
-    
+
                 <!-- Enterprise Plan -->
-                <div class="bg-white rounded-lg shadow-sm p-8 border-t-4 border-blue-800">
-                    <div class="text-center">
-                        <h3 class="text-2xl font-bold text-gray-900">Enterprise</h3>
-                        <div class="mt-4">
-                            <span class="text-4xl font-bold">$5,999</span>
-                            <span class="text-gray-500">/month</span>
-                        </div>
-                        <p class="mt-2 text-gray-500">Full automation mastery</p>
+                <div class="pricing-card enhanced-glass rounded-xl p-8">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold">Enterprise</h3>
+                        <div class="text-4xl font-bold mt-4">$5,999</div>
+                        <div class="text-gray-400">per month</div>
                     </div>
-    
-                    <ul class="mt-8 space-y-4">
-                        <li class="flex items-start">
-                            <i class="fas fa-rocket text-green-500 mt-1 mr-2"></i>
-                            <span>Reduce deployment time to under 2min</span>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Custom solutions
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-dollar-sign text-green-500 mt-1 mr-2"></i>
-                            <span>Cut cloud costs by 60%</span>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            Unlimited apps
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-clock text-green-500 mt-1 mr-2"></i>
-                            <span>Save 15-20 hours/week of developer time</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Custom CI/CD with full automation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-cloud text-green-500 mt-1 mr-2"></i>
-                            <span>Enterprise-wide cloud optimization</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-cube text-green-500 mt-1 mr-2"></i>
-                            <span>Unlimited containerized applications</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-chart-line text-green-500 mt-1 mr-2"></i>
-                            <span>Custom monitoring solutions with ML insights</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-headset text-green-500 mt-1 mr-2"></i>
-                            <span>24/7 priority support with 1hr response</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-shield-alt text-green-500 mt-1 mr-2"></i>
-                            <span>Advanced security with compliance automation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-users text-green-500 mt-1 mr-2"></i>
-                            <span>Dedicated DevOps team</span>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>
+                            24/7 support
                         </li>
                     </ul>
-    
-                    <div class="mt-6 text-sm text-gray-500">
-                        Perfect for: Large teams requiring complete automation and dedicated support
+                    <div class="text-center">
+                        <a href="#contact" class="inline-block w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+                            Get Started
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Replace your existing case studies section with this -->
-<div id="case-studies" class="py-16 bg-gray-50 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold text-gray-900">Success Stories</h2>
-            <p class="mt-4 text-lg text-gray-500">Real-world transformation journeys</p>
-        </div>
-        
-        <!-- Success Stories Carousel -->
-        <div class="relative">
-            <div class="success-stories-container overflow-hidden">
-                <div class="success-stories-track flex animate-scroll">
-                    <!-- First Set -->
-                    <div class="min-w-full grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- E-commerce Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">E-commerce Giant</div>
-                            <p class="text-gray-600 mb-4">Reduced deployment time from 45min to 3min</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$28.5K</div>
-                            <p class="text-sm text-gray-500">Monthly Cloud Savings</p>
-                        </div>
-                        <!-- Healthcare Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">Healthcare Provider</div>
-                            <p class="text-gray-600 mb-4">99.99% Deployment Success Rate</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$32.7K</div>
-                            <p class="text-sm text-gray-500">Monthly Cost Reduction</p>
-                        </div>
-                        <!-- FinTech Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">FinTech Platform</div>
-                            <p class="text-gray-600 mb-4">Zero-touch deployment achieved</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$25K</div>
-                            <p class="text-sm text-gray-500">Monthly Infrastructure Savings</p>
-                        </div>
-                    </div>
-                    <!-- Second Set -->
-                    <div class="min-w-full grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- SaaS Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">SaaS Company</div>
-                            <p class="text-gray-600 mb-4">15hrs/week developer time saved</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$22K</div>
-                            <p class="text-sm text-gray-500">Monthly Cost Optimization</p>
-                        </div>
-                        <!-- Retail Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">Retail Chain</div>
-                            <p class="text-gray-600 mb-4">95% Automation Achievement</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$18K</div>
-                            <p class="text-sm text-gray-500">Monthly Cloud Savings</p>
-                        </div>
-                        <!-- EdTech Case -->
-                        <div class="bg-white rounded-lg p-6 shadow-sm feature-card">
-                            <div class="text-blue-600 mb-4 text-lg font-semibold">EdTech Startup</div>
-                            <p class="text-gray-600 mb-4">2min average deployment time</p>
-                            <div class="text-3xl font-bold text-blue-600 mb-2">$15K</div>
-                            <p class="text-sm text-gray-500">Monthly Cost Reduction</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-100%);
-    }
-    50.01% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.animate-scroll {
-    animation: scroll 20s linear infinite;
-}
-
-.success-stories-track:hover {
-    animation-play-state: paused;
-}
-
-.success-stories-container {
-    mask-image: linear-gradient(
-        to right,
-        transparent,
-        black 10%,
-        black 90%,
-        transparent
-    );
-}
-</style>
-    <!-- Client Testimonials -->
-    <div class="py-16 bg-white">
+    <!-- Contact Section -->
+    <div id="contact" class="py-20 bg-gray-900 relative">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">What Our Clients Say</h2>
-                <p class="mt-4 text-lg text-gray-500">Real feedback from real clients</p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Get <span class="gradient-text">Started</span></h2>
+                <p class="text-gray-400 text-xl">Start your DevOps transformation today</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="testimonial-card p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <p class="text-gray-600 mb-4">"The team's expertise in containerization and cost optimization has transformed our infrastructure. We're seeing better performance at lower costs."</p>
-                    <div class="mt-4">
-                        <p class="font-semibold text-gray-900">Sarah Chen</p>
-                        <p class="text-sm text-gray-500">CTO, TechStart Solutions</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+<div class="enhanced-glass rounded-xl p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Call Us</h3>
+                                <a href="tel:+918859820935" class="text-blue-400 hover:text-blue-300">+91 885 982 0935</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Email</h3>
+                                <a href="mailto:hritikchaudhary016@gmail.com" class="text-blue-400 hover:text-blue-300">hritikchaudhary016@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center mr-4">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">WhatsApp</h3>
+                                <a href="https://wa.me/918859820935" class="text-blue-400 hover:text-blue-300">Message Us</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <p class="text-gray-600 mb-4">"The migration from our legacy systems was smooth and professional. Their attention to security and compliance was impressive."</p>
-                    <div class="mt-4">
-                        <p class="font-semibold text-gray-900">Michael Rodriguez</p>
-                        <p class="text-sm text-gray-500">Head of IT, HealthCare Plus</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-quote-left text-3xl"></i>
-                    </div>
-                    <p class="text-gray-600 mb-4">"Their DevOps automation solutions have significantly reduced our deployment time and improved our overall efficiency."</p>
-                    <div class="mt-4">
-                        <p class="font-semibold text-gray-900">Alex Thompson</p>
-                        <p class="text-sm text-gray-500">DevOps Manager, FinTech Now</p>
-                    </div>
+                <!-- Contact Form (Google Form) -->
+                <div class="enhanced-glass rounded-xl p-8">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSe8LB6d2f6ncUbyPNS2_OxTvdF00a-TZqvSGOj4GarqmQTlEA/viewform?embedded=true" 
+                        width="100%" 
+                        height="500" 
+                        frameborder="0" 
+                        class="rounded-lg">
+                        Loading…
+                    </iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Technology Stack -->
-    <div class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Our Technology Stack</h2>
-                <p class="mt-4 text-lg text-gray-500">Modern tools for modern solutions</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <!-- Cloud Platforms -->
-                <div class="tech-icon p-4">
-                    <i class="fab fa-aws text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">AWS</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fab fa-microsoft text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Azure</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fab fa-google text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Google Cloud</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fas fa-cloud text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Multi-Cloud</p>
-                </div>
-<!-- Container & Orchestration -->
-                <div class="tech-icon p-4">
-                    <i class="fab fa-docker text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Docker</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fas fa-dharmachakra text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Kubernetes</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fas fa-box text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Containerd</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fas fa-cubes text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">OpenShift</p>
-                </div>
-
-                <!-- CI/CD & Automation -->
-                <div class="tech-icon p-4">
-                    <i class="fab fa-jenkins text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Jenkins</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fab fa-github text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">GitHub Actions</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fab fa-gitlab text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">GitLab CI</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fas fa-code-branch text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">ArgoCD</p>
-                </div>
-
-                <!-- Monitoring & Security -->
-                <div class="tech-icon p-4">
-                    <i class="fas fa-chart-line text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Prometheus</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fas fa-chart-area text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Grafana</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fas fa-shield-alt text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Vault</p>
-                </div>
-                <div class="tech-icon p-4">
-                    <i class="fas fa-lock text-5xl text-gray-700"></i>
-                    <p class="mt-2 text-gray-600">Security Tools</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Team Section -->
-    <div id="team" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Our Expert Team</h2>
-                <p class="mt-4 text-lg text-gray-500">Industry veterans with proven expertise</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Hritik's Profile -->
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card">
-                    <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                        <span class="text-2xl font-bold text-white">HC</span>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold text-gray-900">Hritik Chaudhary</h3>
-                    <p class="mt-2 text-gray-500">Cloud Solutions Architect</p>
-                    <p class="mt-3 text-sm text-gray-600">AWS & Azure Certified Expert</p>
-<!--                     <div class="mt-4 flex justify-center space-x-3">
-                        <a href="mailto:hritikchaudhary016@gmail.com" class="text-blue-600 hover:text-blue-800">
-                            <i class="fas fa-envelope text-lg"></i>
-                        </a>
-                        <a href="tel:+918859820935" class="text-blue-600 hover:text-blue-800">
-                            <i class="fas fa-phone text-lg"></i>
-                        </a>
-                        <a href="https://wa.me/918859820935" class="text-green-600 hover:text-green-800">
-                            <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                    </div> -->
-                </div>
-
-                <!-- Keshav's Profile -->
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card">
-                    <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                        <span class="text-2xl font-bold text-white">KS</span>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold text-gray-900">Keshav Saini</h3>
-                    <p class="mt-2 text-gray-500">DevOps Engineer</p>
-                    <p class="mt-3 text-sm text-gray-600">CI/CD & Automation Specialist</p>
-<!--                     <div class="mt-4 flex justify-center space-x-3">
-                        <a href="#" class="text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-linkedin text-lg"></i>
-                        </a>
-                        <a href="tel:+917017323865" class="text-blue-600 hover:text-blue-800">
-                            <i class="fas fa-phone text-lg"></i>
-                        </a>
-                        <a href="https://wa.me/917017323865" class="text-green-600 hover:text-green-800">
-                            <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                    </div> -->
-                </div>
-
-                <!-- Sumit's Profile -->
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card">
-                    <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                        <span class="text-2xl font-bold text-white">SK</span>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold text-gray-900">Sumit Kumar</h3>
-                    <p class="mt-2 text-gray-500">Infrastructure Specialist</p>
-                    <p class="mt-3 text-sm text-gray-600">Cloud Optimization Expert</p>
-<!--                     <div class="mt-4 flex justify-center space-x-3">
-                        <a href="#" class="text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-linkedin text-lg"></i>
-                        </a>
-                        <a href="tel:+918859820935" class="text-blue-600 hover:text-blue-800">
-                            <i class="fas fa-phone text-lg"></i>
-                        </a>
-                        <a href="https://wa.me/918859820935" class="text-green-600 hover:text-green-800">
-                            <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                    </div> -->
-                </div>
-
-                <!-- Giri's Profile -->
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center feature-card">
-                    <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                        <span class="text-2xl font-bold text-white">GO</span>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold text-gray-900">Giri Orsu</h3>
-                    <p class="mt-2 text-gray-500">Cloud Security Architect</p>
-                    <p class="mt-3 text-sm text-gray-600">Security & Compliance Expert</p>
-<!--                     <div class="mt-4 flex justify-center space-x-3">
-                        <a href="#" class="text-blue-600 hover:text-blue-800">
-                            <i class="fab fa-linkedin text-lg"></i>
-                        </a>
-                        <a href="tel:+917017323865" class="text-blue-600 hover:text-blue-800">
-                            <i class="fas fa-phone text-lg"></i>
-                        </a>
-                        <a href="https://wa.me/917017323865" class="text-green-600 hover:text-green-800">
-                            <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </div>
-<!-- Contact Section -->
-    <div id="contact" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Start Your Transformation</h2>
-                <p class="mt-4 text-lg text-gray-500">Get your free infrastructure assessment today</p>
-            </div>
-            
-            <!-- Contact Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-phone-alt text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900">Call Us</h3>
-                    <p class="mt-2 text-gray-600">24/7 Support Available</p>
-                    <a href="tel:+918859820935" class="mt-4 inline-block text-blue-600 hover:text-blue-800">
-                        Schedule a Call
-                    </a>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fab fa-whatsapp text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900">WhatsApp</h3>
-                    <p class="mt-2 text-gray-600">Quick Responses</p>
-                    <a href="https://wa.me/918859820935" class="mt-4 inline-block text-blue-600 hover:text-blue-800">
-                        Message Us
-                    </a>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-envelope text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900">Email</h3>
-                    <p class="mt-2 text-gray-600">Detailed Inquiries</p>
-                    <a href="mailto:hritikchaudhary016@gmail.com" class="mt-4 inline-block text-blue-600 hover:text-blue-800">
-                        Email Us
-                    </a>
-                </div>
-            </div>
-
-<!-- Contact Form Section with Styling -->
-<div id="contact" class="py-16 bg-gradient-to-b from-gray-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-            <h2 class="text-3xl font-extrabold text-gray-900">Get Your Free Cloud Cost Analysis</h2>
-            <p class="mt-4 text-lg text-gray-600">Discover how much you could save with our cloud optimization expertise</p>
-        </div>
-
-        <!-- Value Proposition Cards -->
-        <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3 mb-12">
-            <div class="bg-white rounded-lg shadow-sm p-6 border-t-4 border-blue-500">
-                <div class="text-blue-600 mb-4">
-                    <i class="fas fa-chart-line text-3xl"></i>
-                </div>
-                <h3 class="text-lg font-semibold text-gray-900">Infrastructure Assessment</h3>
-                <p class="mt-2 text-gray-600">Comprehensive analysis of your current cloud setup and costs</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-sm p-6 border-t-4 border-green-500">
-                <div class="text-green-600 mb-4">
-                    <i class="fas fa-dollar-sign text-3xl"></i>
-                </div>
-                <h3 class="text-lg font-semibold text-gray-900">Savings Calculation</h3>
-                <p class="mt-2 text-gray-600">Detailed breakdown of potential cost savings and ROI</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-sm p-6 border-t-4 border-purple-500">
-                <div class="text-purple-600 mb-4">
-                    <i class="fas fa-road text-3xl"></i>
-                </div>
-                <h3 class="text-lg font-semibold text-gray-900">Action Plan</h3>
-                <p class="mt-2 text-gray-600">Custom roadmap for optimization and modernization</p>
-            </div>
-        </div>
-
-        <!-- Form Container -->
-        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-            <!-- Form Header -->
-            <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-6 text-white">
-                <h3 class="text-xl font-bold">Request Your Free Analysis</h3>
-                <p class="mt-2 opacity-90">Fill out the form below and our experts will get back to you within 24 hours</p>
-            </div>
-
-            <!-- Google Form -->
-            <div class="p-1">
-                <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSe8LB6d2f6ncUbyPNS2_OxTvdF00a-TZqvSGOj4GarqmQTlEA/viewform?embedded=true" 
-                    width="100%" 
-                    height="800" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0">
-                    Loading…
-                </iframe>
-            </div>
-        </div>
-
-        <!-- Trust Indicators -->
-        <div class="mt-12 text-center">
-            <div class="flex flex-wrap justify-center items-center gap-6 text-gray-500">
-                <div class="flex items-center">
-                    <i class="fas fa-shield-alt mr-2"></i>
-                    <span>100% Secure & Confidential</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-clock mr-2"></i>
-                    <span>24-Hour Response Time</span>
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-check-circle mr-2"></i>
-                    <span>No Obligation</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
     <!-- Footer -->
-    <footer class="bg-gray-800 pt-12 pb-8">
+    <footer class="bg-gray-900 pt-20 pb-10">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Company Info -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-2">
-                    <h3 class="text-2xl font-bold text-white">Automate<span class="text-blue-400">Devops</span></h3>
-                    <p class="mt-4 text-gray-300">Transform your infrastructure with our expert cloud optimization and modernization solutions.</p>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="mailto:hritikchaudhary016@gmail.com" class="text-gray-400 hover:text-white">
+                    <h3 class="text-2xl font-bold gradient-text mb-6">AutomateDevops</h3>
+                    <p class="text-gray-400 mb-6">Transform your infrastructure with our expert cloud optimization and modernization solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:hritikchaudhary016@gmail.com" class="text-gray-400 hover:text-blue-400 transition">
                             <i class="fas fa-envelope text-xl"></i>
                         </a>
-                        <a href="https://wa.me/918859820935" class="text-gray-400 hover:text-white">
+                        <a href="https://wa.me/918859820935" class="text-gray-400 hover:text-blue-400 transition">
                             <i class="fab fa-whatsapp text-xl"></i>
                         </a>
-                        <a href="https://www.linkedin.com/company/automatedevops/" class="text-gray-400 hover:text-white">
+                        <a href="https://www.linkedin.com/company/automatedevops/" class="text-gray-400 hover:text-blue-400 transition">
                             <i class="fab fa-linkedin text-xl"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#solutions" class="text-gray-300 hover:text-white">Cloud Solutions</a></li>
-                        <li><a href="#modernization" class="text-gray-300 hover:text-white">Modernization</a></li>
-                        <li><a href="#cost-savings" class="text-gray-300 hover:text-white">Cost Optimization</a></li>
-                        <li><a href="#case-studies" class="text-gray-300 hover:text-white">Success Stories</a></li>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#solutions" class="text-gray-400 hover:text-blue-400 transition">Solutions</a></li>
+                        <li><a href="#freelancers" class="text-gray-400 hover:text-blue-400 transition">Hire DevOps</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-blue-400 transition">Pricing</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-blue-400 transition">Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
                 <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
-                    <ul class="space-y-2">
-                        <li class="text-gray-300">
-                            <i class="fas fa-envelope mr-2"></i>
-                            <a href="mailto:hritikchaudhary016@gmail.com" class="hover:text-white">Email Us</a>
-                        </li>
-                        <li class="text-gray-300">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            <a href="https://wa.me/918859820935" class="hover:text-white">WhatsApp</a>
-                        </li>
-                        <li class="text-gray-300">
-                            <i class="fas fa-phone mr-2"></i>
-                            <a href="tel:+918859820935" class="hover:text-white">Call Us</a>
-                        </li>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Cloud Optimization</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Infrastructure Modernization</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">DevOps Automation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Consulting</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-                <p class="text-gray-400">&copy; 2024 AutomateDevops. All rights reserved.</p>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500">&copy; 2024 AutomateDevops. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <div class="fixed bottom-8 right-8 z-50">
-        <a href="https://wa.me/918859820935" 
-           target="_blank"
-           class="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 flex items-center justify-center shadow-lg transition-all">
-            <i class="fab fa-whatsapp text-2xl"></i>
-        </a>
-    </div>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918859820935" 
+       class="fixed bottom-8 right-8 z-50 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition-all">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+    <script>
+        // Wait for page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show page content
+            document.body.classList.add('loaded');
+
+            // Initialize GSAP
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate stats
+            const stats = document.querySelectorAll('.stat-value');
+            stats.forEach(stat => {
+                const value = parseInt(stat.getAttribute('data-value'));
+                gsap.to(stat, {
+                    innerText: value,
+                    duration: 2,
+                    snap: { innerText: 1 },
+                    scrollTrigger: {
+                        trigger: stat,
+                        start: "top 80%"
+                    }
+                });
+            });
+
+            // Scroll animations
+            gsap.utils.toArray('.enhanced-glass').forEach(card => {
+                gsap.from(card, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Timeline animations
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#modernization",
+                    start: "top center",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            timeline.from(".timeline-item", {
+                opacity: 0,
+                y: 30,
+                stagger: 0.3,
+                duration: 0.8
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
