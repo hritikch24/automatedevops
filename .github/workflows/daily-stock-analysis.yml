@@ -1,0 +1,61 @@
+name: Daily US Stock Analysis
+
+on:
+  schedule:
+    # Runs every day at 9:30 AM EST (after US market opens)
+    # 9:30 AM EST = 2:30 PM UTC (during standard time)
+    - cron: '30 14 * * 1-5'  # Monday-Friday at 2:30 PM UTC
+  workflow_dispatch:  # Allow manual triggers
+
+jobs:
+  analyze-stocks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r .github/workflows/requirements.txt
+
+      - name: Run stock analysis
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          MAILGUN_DOMAIN: ${{ secrets.MAILGUN_DOMAIN }}
+          MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: |
+          python .github/workflows/stock_analyzer.py
+
+      - name: Commit analysis results
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          if [ -f latest_stock_picks.json ]; then
+            git add latest_stock_picks.json
+            git diff --staged --quiet || git commit -m "Update daily stock analysis - $(date +'%Y-%m-%d')"
+            git push
+          fi
+        continue-on-error: true
+
+      - name: Upload analysis artifact
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: stock-analysis-${{ github.run_number }}
+          path: latest_stock_picks.json
+          retention-days: 30
