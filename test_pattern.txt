@@ -1,0 +1,15 @@
+# Common patterns similar to potential passwords
+password
+password123
+admin123
+test123
+admin
+admin@123
+test@123
+user@123
+name@123
+giri@123
+Giri@123
+GIRI@123
+giri123
+Giri123

@@ -16,13 +16,13 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2122039846521532"
      crossorigin="anonymous"></script>
     <!-- Primary Meta Tags -->
-    <title>AutomateDevops | Cloud Optimization & Modern DevOps Solutions</title>
-    <meta name="title" content="AutomateDevops | Cloud Optimization & Modern DevOps Solutions">
+    <title>AutomateDevops | Cloud Optimization & DevOps Solutions</title>
+    <meta name="title" content="AutomateDevops | Cloud Optimization & DevOps Solutions">
     <meta name="description" content="Premier DevOps automation experts delivering cloud cost optimization, legacy modernization, and containerization solutions. Achieve up to 60% cost savings with our proven methodologies.">
     <meta name="keywords" content="Cloud Cost Optimization, AWS Cost Reduction, Azure Savings, DevOps Automation, Infrastructure as Code, CI/CD Pipeline, Cloud Migration, Kubernetes Management, Legacy Modernization, Container Migration, DevOps Freelancers, Hire DevOps Engineers">
     <meta name="author" content="AutomateDevops">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="language" content="English">
+    <meta name="language" content="en">
     <meta name="revisit-after" content="7 days">
     <meta name="rating" content="general">
 
@@ -297,8 +297,8 @@
         "@type": "ContactPoint",
         "telephone": "+91-885-982-0935",
         "contactType": "Customer Service",
-        "email": "hritikchaudhary016@gmail.com",
-        "availableLanguage": "English"
+        "email": "contact@automatedevops.tech",
+        "availableLanguage": "en"
       },
       "sameAs": [
         "https://www.linkedin.com/company/automatedevops/",
@@ -311,10 +311,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Metadata -->
-    <meta name="description" content="Premier DevOps automation experts delivering cloud cost optimization, legacy modernization, and containerization solutions. Developer rates from $40-60/hr.">
-    <meta name="keywords" content="DevOps Automation, Cloud Optimization, Freelance DevOps, AWS, Azure, GCP, CI/CD, Infrastructure as Code">
-    
     <style>
         /* Core animations */
         @keyframes float {
@@ -1066,7 +1062,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold">Email</h3>
-                                <a href="mailto:hritikchaudhary016@gmail.com" class="text-blue-400 hover:text-blue-300">hritikchaudhary016@gmail.com</a>
+                                <a href="#" class="email-link text-blue-400 hover:text-blue-300" data-user="hritikchaudhary016" data-domain="gmail.com">Email Us</a>
                             </div>
                         </div>
 
@@ -1076,7 +1072,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold">WhatsApp</h3>
-                                <a href="https://wa.me/918859820935" class="text-blue-400 hover:text-blue-300">Message Us</a>
+                                <a href="https://wa.me/918859820935" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300">Message Us</a>
                             </div>
                         </div>
                     </div>
@@ -1142,13 +1138,13 @@
                 <h3 class="text-2xl font-bold gradient-text mb-6">AutomateDevops</h3>
                 <p class="text-gray-400 mb-6">Transform your infrastructure with our expert cloud optimization and modernization solutions.</p>
                 <div class="flex space-x-4">
-                    <a href="mailto:hritikchaudhary016@gmail.com" class="text-gray-400 hover:text-blue-400 transition" aria-label="Email">
+                    <a href="#" class="email-link text-gray-400 hover:text-blue-400 transition" data-user="hritikchaudhary016" data-domain="gmail.com" aria-label="Email">
                         <i class="fas fa-envelope text-xl"></i>
                     </a>
-                    <a href="https://wa.me/918859820935" class="text-gray-400 hover:text-blue-400 transition" aria-label="WhatsApp">
+                    <a href="https://wa.me/918859820935" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp text-xl"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/automatedevops/" class="text-gray-400 hover:text-blue-400 transition" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/automatedevops/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-400 transition" aria-label="LinkedIn">
                         <i class="fab fa-linkedin text-xl"></i>
                     </a>
                 </div>
@@ -1183,7 +1179,10 @@
 </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/918859820935" 
+    <a href="https://wa.me/918859820935"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp"
        class="fixed bottom-8 right-8 z-50 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition-all">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
@@ -1197,6 +1196,19 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Show page content
             document.body.classList.add('loaded');
+
+            // Decode email links
+            document.querySelectorAll('.email-link').forEach(link => {
+                const user = link.getAttribute('data-user');
+                const domain = link.getAttribute('data-domain');
+                if (user && domain) {
+                    const email = user + '@' + domain;
+                    link.href = 'mailto:' + email;
+                    if (link.textContent === 'Email Us') {
+                        link.textContent = email;
+                    }
+                }
+            });
 
             // Initialize GSAP
             gsap.registerPlugin(ScrollTrigger);
