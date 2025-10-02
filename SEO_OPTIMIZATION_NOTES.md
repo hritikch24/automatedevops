@@ -33,7 +33,7 @@ SPF (Sender Policy Framework) is a DNS record that specifies which mail servers 
 **How to Add SPF Record:**
 
 1. **Log into your DNS provider** (where automatedevops.tech domain is registered)
-   - GoDaddy, Namecheap, Cloudflare, etc.
+   - GoDaddy, Namecheap, or wherever your domain is registered
 
 2. **Add a TXT record** with these details:
    ```
@@ -65,37 +65,7 @@ SPF (Sender Policy Framework) is a DNS record that specifies which mail servers 
 HSTS forces browsers to always connect via HTTPS, preventing man-in-the-middle attacks and protocol downgrade attacks.
 
 **GitHub Pages Configuration:**
-GitHub Pages doesn't support custom HTTP headers. You have two options:
-
-#### Option 1: Use Cloudflare (Recommended & Free)
-
-1. **Sign up for Cloudflare**:
-   - Go to https://www.cloudflare.com
-   - Add your site: automatedevops.tech
-
-2. **Update DNS nameservers**:
-   - Cloudflare will provide 2 nameservers
-   - Update these in your domain registrar
-
-3. **Enable HSTS in Cloudflare**:
-   - Go to SSL/TLS → Edge Certificates
-   - Enable "Always Use HTTPS"
-   - Enable "HSTS" with these settings:
-     - Max Age: 12 months (31536000 seconds)
-     - Include subdomains: Yes
-     - Preload: Yes (optional)
-     - No-Sniff header: Yes
-
-4. **Additional Cloudflare Benefits**:
-   - Free CDN (solves "CDN Usage" SEO issue)
-   - Free SSL certificate
-   - DDoS protection
-   - Faster global delivery
-   - Analytics
-
-#### Option 2: Migrate to Netlify/Vercel
-
-If you migrate hosting to Netlify or Vercel, create a `_headers` file:
+GitHub Pages doesn't support custom HTTP headers. If you migrate hosting to Netlify or Vercel, create a `_headers` file:
 
 ```
 /*
@@ -106,6 +76,8 @@ If you migrate hosting to Netlify or Vercel, create a `_headers` file:
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
 ```
+
+**Note:** HSTS requires server-level configuration which is not available on GitHub Pages. This is a minor SEO issue and your site is still secure with HTTPS.
 
 ## 📊 JavaScript Performance Optimization
 
@@ -159,8 +131,8 @@ If you migrate hosting to Netlify or Vercel, create a `_headers` file:
 
 - Remaining (requires DNS/Server config):
   - ⏳ SPF record (DNS configuration)
-  - ⏳ HSTS headers (Cloudflare recommended)
-  - ⏳ CDN usage (free with Cloudflare)
+  - ⏳ HSTS headers (requires Netlify/Vercel or reverse proxy)
+  - ⏳ CDN usage (requires external CDN service)
 
 ## 🚀 Next Steps
 
@@ -172,13 +144,6 @@ If you migrate hosting to Netlify or Vercel, create a `_headers` file:
 ### DNS Configuration (15 minutes):
 1. **Add SPF record** following instructions above
 2. **Verify with MXToolbox**: https://mxtoolbox.com/spf.aspx
-
-### Cloudflare Setup (30 minutes):
-1. **Sign up** at https://www.cloudflare.com
-2. **Add domain**: automatedevops.tech
-3. **Update nameservers** at your domain registrar
-4. **Enable HSTS** in SSL/TLS settings
-5. **Enable CDN** features (automatic)
 
 ### Testing After Changes:
 1. **SEO Test**: https://seositecheckup.com
@@ -252,10 +217,9 @@ If you migrate hosting to Netlify or Vercel, create a `_headers` file:
 After implementing all changes, verify:
 
 - [ ] SPF record added and verified
-- [ ] HSTS enabled via Cloudflare
-- [ ] Email links work correctly
+- [ ] Email links work correctly (JavaScript obfuscation)
 - [ ] External links open in new tab with security attributes
 - [ ] No console errors
 - [ ] Mobile responsiveness maintained
 - [ ] Page loads in < 3 seconds
-- [ ] SEO score > 90/100
+- [ ] SEO score improved (85+ to 92+)
